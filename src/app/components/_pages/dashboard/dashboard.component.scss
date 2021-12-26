@@ -1,0 +1,176 @@
+.Dashboard {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background: radial-gradient( circle farthest-corner at 10% 20%, rgb(203, 236, 255) 0%, rgb(33, 59, 63) 90%);
+}
+
+.Dashboard-Logo {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Dashboard-Logo img {
+    background-color: #333;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.Dashboard-Name {
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.Dashboard-Links {
+    padding-top: 30px;
+    text-align: center;
+    column-count: 1;
+}
+
+.Dashboard-Links a {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 15px;
+    display: block;
+    background: #eee;
+    color: black;
+    border-radius: 10px;
+    border: solid 2px #eee;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Dashboard-Links a:hover, .Items-Link a:focus, .Items-Link a:active {
+    background: #eee !important;
+    border-color: #eee !important;
+    color: black;
+}
+
+.Dashboard-Icons {
+    margin: auto;
+    text-align: center;
+}
+
+.Dashboard-Icons a {
+    color: transparent;
+}
+
+.Dashboard-Icons img {
+    width: 30px;
+    margin: 10px;
+}
+
+/*#region-----------------------Responsive_Layout-------------------------*/
+
+@media screen and (min-width: 320px) {}
+
+@media screen and (min-width: 375px) {
+    .Dashboard-Logo img {
+        width: 85px;
+        height: 85px;
+    }
+    .Dashboard-Name {
+        font-size: 20px;
+    }
+    .Dashboard-Links a {
+        width: 85%;
+    }
+    .Dashboard-Icons img {
+        width: 40px;
+        margin: 15px;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .Dashboard-Logo img {
+        width: 85px;
+        height: 85px;
+    }
+    .Dashboard-Name {
+        font-size: 22px;
+    }
+    .Dashboard-Links a {
+        width: 80%;
+    }
+    .Dashboard-Icons img {
+        width: 40px;
+        margin: 15px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .Dashboard-Logo img {
+        width: 85px;
+        height: 85px;
+    }
+    .Dashboard-Name {
+        font-size: 22px;
+    }
+    .Dashboard-Links a {
+        width: 45%;
+    }
+    .Dashboard-Icons img {
+        width: 40px;
+        margin: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Dashboard-Logo img {
+        width: 100px;
+        height: 100px;
+    }
+    .Dashboard-Name {
+        font-size: 25px;
+    }
+    .Dashboard-Links a {
+        width: 35%;
+        font-size: 20px;
+    }
+    .Dashboard-Icons img {
+        width: 45px;
+        margin: 25px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .Dashboard-Logo img {
+        width: 100px;
+        height: 100px;
+    }
+    .Dashboard-Name {
+        font-size: 25px;
+    }
+    .Dashboard-Links a {
+        width: 30%;
+        font-size: 20px;
+    }
+    .Dashboard-Icons img {
+        width: 50px;
+        margin: 25px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .Dashboard-Logo img {
+        width: 175px;
+        height: 175px;
+    }
+    .Dashboard-Name {
+        font-size: 45px;
+    }
+    .Dashboard-Links a {
+        width: 25%;
+        font-size: 35px;
+    }
+    .Dashboard-Icons img {
+        width: 80px;
+        margin: 35px;
+    }
+}
+
+/*#endregion*/

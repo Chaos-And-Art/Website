@@ -1,27 +1,32 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Chaos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Art</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Apps</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Music</a>
-          </li>
-        </ul>
-      </div>
-      <a class="navbar-brand" href="#">Chaos & Art</a>
+<div class="Header">
+    <a routerLink="/Dashboard" class="Company-Name Nav_Button">Chaos & Art</a>
+    <nav class="Top-Nav">
+        <a routerLink="/Home" class="Nav_Button Active-Page">Home</a>
+        <a routerLink="/Chaos" class="Nav_Button ">Chaos</a>
+        <a routerLink="/Art" class="Nav_Button">Art</a>
+        <a routerLink="/Apps" class="Nav_Button">Apps</a>
+        <a class="Nav_Button Music_Popup">Music</a>
+    </nav>
+</div>
+
+<input id="Nav_Menu" class="Nav_Menu" type="checkbox" />
+<label class="Nav_Menu" for="Nav_Menu">
+    <i></i>
+</label>
+<nav class="Side_Nav">
+    <div class="Side_Nav_Content" >
+        <div class="Side_Nav_Links">
+            <a routerLink="/Home" class="Nav_Button Active-Page">Home</a>
+            <a routerLink="/Chaos" class="Nav_Button ">Chaos</a>
+            <a routerLink="/Art" class="Nav_Button">Art</a>
+            <a routerLink="/Music" class="Nav_Button">Apps</a>
+            <a class="Nav_Button Music_Popup">Music</a>
+        </div>
+
+        <div class="Side_Nav_Closer">
+            <div class="Side_Nav_Border">-</div>
+            <a class="Side_Nav_Contact" routerLink="/Contact">CONTACT US</a>
+            <a class="Side_Nav_Dashboard" routerLink="/Dashboard">DASHBOARD</a>
+        </div>
     </div>
-  </nav>
+</nav>
