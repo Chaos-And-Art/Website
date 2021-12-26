@@ -4262,6 +4262,13 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+ng-particles@2.20.6:
+  version "2.20.6"
+  resolved "https://registry.yarnpkg.com/ng-particles/-/ng-particles-2.20.6.tgz#3d4114c12ecf0729b26d8215b8cd5a9a367c2cbc"
+  integrity sha512-XtbaBAVS1i8CZj5c8F7hzs1nAqn/iXAqoBhM/teL/XYTXiOD1VIjfTdVLlFcyhZMsK57kllqZl5DvRRl+rfbfw==
+  dependencies:
+    tslib "^2.2.0"
+
 nice-napi@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nice-napi/-/nice-napi-1.0.2.tgz#dc0ab5a1eac20ce548802fc5686eaa6bc654927b"
@@ -5959,7 +5966,7 @@ tree-kill@1.2.2:
   resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
   integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
-tslib@2.3.1, tslib@^2.0.0, tslib@^2.3.0:
+tslib@2.3.1, tslib@^2.0.0, tslib@^2.2.0, tslib@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
@@ -5973,6 +5980,11 @@ tslib@~2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
   integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
+
+tsparticles@1.37.6:
+  version "1.37.6"
+  resolved "https://registry.yarnpkg.com/tsparticles/-/tsparticles-1.37.6.tgz#f59951350d116a822c576932a4e057160e01bebf"
+  integrity sha512-DGmlIij32gqZJ++WFJO6MxvO9wZjwfhYEpGdwHWF/+zVBkHQSLEuM97ffxFwgzCq6hQ37ljECmk2zwooOxeGBA==
 
 type-fest@^0.21.3:
   version "0.21.3"

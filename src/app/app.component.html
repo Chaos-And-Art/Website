@@ -1,2 +1,2 @@
-<app-nav-bar></app-nav-bar>
-<h1>{{title}}</h1>
+<app-nav-bar *ngIf="_router.url != '/Dashboard'"></app-nav-bar>
+<router-outlet></router-outlet>
