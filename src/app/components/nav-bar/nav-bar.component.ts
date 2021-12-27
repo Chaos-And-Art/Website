@@ -22,7 +22,7 @@ export class NavBarComponent implements OnInit {
   }
 
   @HostListener('document:click')
-  clickout() {
+  clickOut() {
     if (!this.wasInside) {
       let navContent = document.getElementById('Nav_Menu') as HTMLInputElement;
       navContent.checked = false;

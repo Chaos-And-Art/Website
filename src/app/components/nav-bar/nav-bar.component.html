@@ -1,10 +1,10 @@
 <div class="Header">
-    <a routerLink="/Dashboard" class="Company-Name Nav_Button">Chaos & Art</a>
+    <a routerLink="/" class="Company-Name Nav_Button">Chaos & Art</a>
     <nav class="Top-Nav">
-        <a routerLink="/Home" class="Nav_Button Active-Page">Home</a>
-        <a routerLink="/Chaos" class="Nav_Button ">Chaos</a>
-        <a routerLink="/Art" class="Nav_Button">Art</a>
-        <a routerLink="/Apps" class="Nav_Button">Apps</a>
+        <a routerLink="/Home" routerLinkActive="Active-Page" class="Nav_Button">Home</a>
+        <a routerLink="/Chaos" routerLinkActive="Active-Page" class="Nav_Button ">Chaos</a>
+        <a routerLink="/Art" routerLinkActive="Active-Page" class="Nav_Button">Art</a>
+        <a routerLink="/Apps" routerLinkActive="Active-Page" class="Nav_Button">Apps</a>
         <a class="Nav_Button Music_Popup">Music</a>
     </nav>
 </div>
@@ -14,19 +14,19 @@
     <i></i>
 </label>
 <nav class="Side_Nav">
-    <div class="Side_Nav_Content" >
+    <div class="Side_Nav_Content">
         <div class="Side_Nav_Links">
-            <a routerLink="/Home" class="Nav_Button Active-Page">Home</a>
-            <a routerLink="/Chaos" class="Nav_Button ">Chaos</a>
-            <a routerLink="/Art" class="Nav_Button">Art</a>
-            <a routerLink="/Music" class="Nav_Button">Apps</a>
-            <a class="Nav_Button Music_Popup">Music</a>
+            <a routerLink="/Home" routerLinkActive="Active-Page" (click)="clickOut();" class="Nav_Button">Home</a>
+            <a routerLink="/Chaos" routerLinkActive="Active-Page" (click)="clickOut();" class="Nav_Button ">Chaos</a>
+            <a routerLink="/Art" routerLinkActive="Active-Page" (click)="clickOut();" class="Nav_Button">Art</a>
+            <a routerLink="/Apps" routerLinkActive="Active-Page" (click)="clickOut();" class="Nav_Button">Apps</a>
+            <a (click)="clickOut();" class="Nav_Button Music_Popup">Music</a>
         </div>
 
         <div class="Side_Nav_Closer">
             <div class="Side_Nav_Border">-</div>
             <a class="Side_Nav_Contact" routerLink="/Contact">CONTACT US</a>
-            <a class="Side_Nav_Dashboard" routerLink="/Dashboard">DASHBOARD</a>
+            <a class="Side_Nav_Dashboard" routerLink="/">DASHBOARD</a>
         </div>
     </div>
 </nav>

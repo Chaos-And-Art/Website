@@ -1,2 +1,3 @@
-<app-nav-bar *ngIf="_router.url != '/Dashboard'"></app-nav-bar>
+<app-nav-bar *ngIf="_router.url != '/Dashboard' && _router.url != '/'"></app-nav-bar>
+<app-dashboard *ngIf="_router.url == '/'"></app-dashboard>
 <router-outlet></router-outlet>
