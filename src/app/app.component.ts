@@ -10,5 +10,4 @@ export class AppComponent {
   title: string = 'Chaos & Art';
 
   constructor(public _router: Router) { }
-  
 }
