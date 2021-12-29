@@ -5,7 +5,7 @@
         <a routerLink="/Chaos" routerLinkActive="Active-Page" class="Nav_Button ">Chaos</a>
         <a routerLink="/Art" routerLinkActive="Active-Page" class="Nav_Button">Art</a>
         <a routerLink="/Apps" routerLinkActive="Active-Page" class="Nav_Button">Apps</a>
-        <a class="Nav_Button Music_Popup">Music</a>
+        <a (click)="openMusicDialog();" class="Nav_Button Music_Popup">Music</a>
     </nav>
 </div>
 
@@ -20,7 +20,7 @@
             <a routerLink="/Chaos" routerLinkActive="Active-Page" (click)="clickOut();" class="Nav_Button ">Chaos</a>
             <a routerLink="/Art" routerLinkActive="Active-Page" (click)="clickOut();" class="Nav_Button">Art</a>
             <a routerLink="/Apps" routerLinkActive="Active-Page" (click)="clickOut();" class="Nav_Button">Apps</a>
-            <a (click)="clickOut();" class="Nav_Button Music_Popup">Music</a>
+            <a (click)="clickOut(); openMusicDialog();" class="Nav_Button">Music</a>
         </div>
 
         <div class="Side_Nav_Closer">
