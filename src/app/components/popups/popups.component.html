@@ -1,0 +1,19 @@
+<div *ngIf="data.type === 'music'">
+    <h2 mat-dialog-title>Music Coming Soon!</h2>
+    <mat-dialog-content class="mat-typography">
+        <p>The Music page is currently in development, but will be available in the near future!</p>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        <button mat-button mat-dialog-close>OK</button>
+    </mat-dialog-actions>
+</div>
+
+<div *ngIf="data.type === 'chaos'">
+    <h2 mat-dialog-title>Chaos Coming Soon!</h2>
+    <mat-dialog-content>
+        <p>The Chaos page is currently in development, but will be available in the near future!</p>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        <button mat-button mat-dialog-close>OK</button>
+    </mat-dialog-actions>
+</div>

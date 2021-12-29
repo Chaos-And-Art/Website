@@ -1,4 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupsComponent } from '../popups/popups.component';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,7 +12,7 @@ export class NavBarComponent implements OnInit {
   collapse: boolean = true;
   wasInside: boolean = false;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -29,5 +31,13 @@ export class NavBarComponent implements OnInit {
     }
     this.wasInside = false;
     // console.log("OUTSIDE")
+  }
+
+  openMusicDialog() {
+    const popup = this.dialog.open(PopupsComponent, {
+      data: {
+        type: 'music',
+      },
+    });
   }
 }
