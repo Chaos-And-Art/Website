@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgParticlesModule } from "ng-particles";
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,6 +21,7 @@ import { TermsConditionsComponent } from './components/_pages/terms-conditions/t
 
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PopupsComponent } from './components/popups/popups.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { PopupsComponent } from './components/popups/popups.component';
 
     //Other Components
     NavBarComponent,
-    PopupsComponent
+    PopupsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { PopupsComponent } from './components/popups/popups.component';
     NgParticlesModule,
     MatDialogModule,
     MatButtonModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

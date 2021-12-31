@@ -1,0 +1,86 @@
+.background {
+    width: 100%;
+    height: 100vh;
+}
+
+.Home_Cover {
+    width: 85%;
+    height: auto;
+    margin: auto;
+    color: #eee;
+    background: #111;
+    opacity: 0.9;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Home_Cover_Button {
+    width: 45%;
+    margin: auto;
+    color: white;
+    background: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px 15px 5px;
+    border: solid 1px white;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.Home_Cover_Button:hover,
+.Home_Cover_Button:focus,
+.Home_Cover_Button:active {
+    background: #bbb !important;
+    border-color: #bbb !important;
+    color: black;
+}
+
+/*#region-----------------------Responsive_Layout-------------------------*/
+
+@media screen and (min-width: 320px) {
+}
+
+@media screen and (min-width: 375px) {
+    .Home_Cover {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .Home_Cover {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .Home_Cover {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Home_Cover {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .Home_Cover {
+        width: 22%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .Home_Cover {
+        width: 15%;
+    }
+}
+
+/*#endregion*/

@@ -7,23 +7,35 @@ import type { Container, ISourceOptions } from "tsparticles";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  width: number = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+  height: number = (window.innerHeight > 0) ? window.innerHeight : screen.height;
   id = 'tsparticles';
+
   constructor() { }
 
   ngOnInit(): void { }
 
-  public particlesLoaded(container: Container): void {
-    console.log(container);
+  onExploreButton() {
+    if (this.width < 733) {
+      window.scroll()
+      window.scrollTo(0, this.height / 1.3)
+    }
+    else {
+      window.scrollTo(0, this.height / 1.1)
+    }
   }
+
   options: ISourceOptions = {
+    fpsLimit: 60,
+    fullScreen: {
+      enable: false,
+    },
     background: {
       color: {
         value: "#333"
-      }
+      },
     },
-    fpsLimit: 60,
     interactivity: {
-      detectsOn: "window",
       events: {
         onClick: {
           enable: true,

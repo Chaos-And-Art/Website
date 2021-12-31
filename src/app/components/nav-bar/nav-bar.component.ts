@@ -34,9 +34,12 @@ export class NavBarComponent implements OnInit {
   }
 
   openMusicDialog() {
-    const popup = this.dialog.open(PopupsComponent, {
+    this.dialog.open(PopupsComponent, {
       data: {
         type: 'music',
+      },
+      position: {
+        top: '200px',
       },
     });
   }

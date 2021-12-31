@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,14 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title: string = 'Chaos & Art';
 
-  constructor(public _router: Router) { }
+  constructor(public router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+      // if (e.constructor.name)==="login"{ // for example
+      //   window.scroll(0,0);
+// }
+    });
+  }
 }
