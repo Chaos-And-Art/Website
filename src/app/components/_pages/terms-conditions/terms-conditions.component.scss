@@ -1,0 +1,35 @@
+.Page {
+    padding-top: 100px;
+    padding-left: 10px;
+    width: 100%;
+    margin: auto;
+}
+
+.Page p {
+    font-size: 14px;
+    width: 95%;
+}
+
+.Contents {
+    padding-top: 25px;
+}
+
+.PrivacyTerms {
+    padding-top: 25px;
+}
+
+.PrivacyTerms h3 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.PrivacyTerms h4 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+@media screen and (min-width: 1024px) {
+    .Page {
+        width: 60%;
+    }
+}

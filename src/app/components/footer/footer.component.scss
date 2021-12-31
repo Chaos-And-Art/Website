@@ -1,0 +1,86 @@
+.Footer {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    text-align: center;
+    background: black;
+}
+
+.Contact a {
+    width: 45%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    background: transparent;
+    color: white;
+    border-radius: 15px;
+    border: solid 1px white;
+    padding: 5px 15px 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Contact a:hover,
+.Contact a:focus,
+.Contact a:active {
+    background: #ccc !important;
+    border-color: #ccc !important;
+    color: black;
+}
+
+.Closer {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+.Closer a {
+    color: white;
+    padding: 20px;
+    font-size: 12px;
+}
+
+/*#region-----------------------Responsive_Layout-------------------------*/
+
+@media screen and (min-width: 320px) {
+}
+
+@media screen and (min-width: 375px) {
+}
+
+@media screen and (min-width: 425px) {
+    .Contact a {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .Contact a {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Contact a {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .Contact a {
+        width: 15%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .Contact a {
+        width: 10%;
+    }
+}
+
+/*#endregion*/
