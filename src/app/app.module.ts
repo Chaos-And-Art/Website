@@ -22,6 +22,8 @@ import { TermsConditionsComponent } from './components/_pages/terms-conditions/t
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PopupsComponent } from './components/popups/popups.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CustomCardComponent } from './components/custom-card/custom-card.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { FooterComponent } from './components/footer/footer.component';
     //Other Components
     NavBarComponent,
     PopupsComponent,
-    FooterComponent
+    FooterComponent,
+    CustomCardComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,7 @@ import { FooterComponent } from './components/footer/footer.component';
     NgParticlesModule,
     MatDialogModule,
     MatButtonModule,
-    MatCardModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
