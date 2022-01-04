@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { NgParticlesModule } from 'ng-particles';
+import { NgxTinySliderModule } from 'ngx-tiny-slider';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -53,6 +55,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     MatDialogModule,
     MatButtonModule,
     MatCardModule,
+    NgParticlesModule,
+    NgxTinySliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
