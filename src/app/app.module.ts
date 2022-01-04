@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { NgParticlesModule } from "ng-particles";
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -51,10 +50,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgParticlesModule,
     MatDialogModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
