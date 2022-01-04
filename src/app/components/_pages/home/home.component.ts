@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import type { Container, ISourceOptions } from "tsparticles";
+import type { ISourceOptions } from "tsparticles";
 
 @Component({
   selector: 'app-home',
