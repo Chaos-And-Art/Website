@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
 import { NgParticlesModule } from 'ng-particles';
 import { NgxTinySliderModule } from 'ngx-tiny-slider';
 
@@ -26,6 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CustomCardComponent } from './components/custom-card/custom-card.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 
+import { MatTabScrollToCenterDirective } from './utils/scrolling.directive';
+
 @NgModule({
   declarations: [
     //Page Components
@@ -46,7 +49,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     PopupsComponent,
     FooterComponent,
     CustomCardComponent,
-    CarouselComponent
+    CarouselComponent,
+
+    MatTabScrollToCenterDirective
   ],
   imports: [
     BrowserModule,
@@ -55,6 +60,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     MatDialogModule,
     MatButtonModule,
     MatCardModule,
+    MatTabsModule,
     NgParticlesModule,
     NgxTinySliderModule
   ],

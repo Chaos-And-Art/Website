@@ -16,13 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void { }
 
   onExploreButton() {
-    if (this.width < 733) {
-      window.scroll()
-      window.scrollTo(0, this.height / 1.3)
-    }
-    else {
-      window.scrollTo(0, this.height / 1.1)
-    }
+    window.scrollTo({ left: 0, top: this.height / 1.1, behavior: 'smooth' })
   }
 
   options: ISourceOptions = {
@@ -32,7 +26,7 @@ export class HomeComponent implements OnInit {
     },
     background: {
       color: {
-        value: "#333"
+        value: "rgb(40, 40, 40)"
       },
     },
     interactivity: {

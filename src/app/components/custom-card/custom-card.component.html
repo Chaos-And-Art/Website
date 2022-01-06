@@ -1,1 +1,39 @@
-<p>custom-card works!</p>
+<div class="custom-card" *ngIf="router.url == '/Art'">
+    <mat-card  *ngFor="let card of cards">
+        <div>
+            <img mat-card-image [src]="card.imgSrc"
+                alt="Photo of a Shiba Inu">
+        </div>
+        <mat-card-content>
+            <h4>{{data.id}}</h4>
+            <h2>App 1</h2>
+            <p> This is a temporary placeholder. This layout is not final. Available apps and games are
+                almost here! I appreciate you taking the time to explore my website. :)
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button><img src="/assets/_misc/Google.png" alt="Google Play"></button>
+            <button mat-button><img src="/assets/_misc/Apple.png" alt="App Store"></button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<div class="custom-card" *ngIf="router.url == '/Apps'">
+    <mat-card>
+        <div>
+            <img mat-card-image src="https://images.pexels.com/photos/3299386/pexels-photo-3299386.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                alt="Photo of a Shiba Inu">
+        </div>
+        <mat-card-content>
+            <h4>Click to Play</h4>
+            <h2>App 1</h2>
+            <p> This is a temporary placeholder. This layout is not final. Available apps and games are
+                almost here! I appreciate you taking the time to explore my website. :)
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button><img src="/assets/_misc/Google.png" alt="Google Play"></button>
+            <button mat-button><img src="/assets/_misc/Apple.png" alt="App Store"></button>
+        </mat-card-actions>
+    </mat-card>
+</div>

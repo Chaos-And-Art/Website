@@ -1,6 +1,5 @@
-import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
-import { NgxTinySliderComponent, NgxTinySliderInstanceInterface, NgxTinySliderSettingsInterface } from 'ngx-tiny-slider';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgxTinySliderInstanceInterface, NgxTinySliderSettingsInterface } from 'ngx-tiny-slider';
 import { BehaviorSubject, filter } from 'rxjs';
 import { CarouselArtImage } from 'src/app/models/carouselArtImage';
 
