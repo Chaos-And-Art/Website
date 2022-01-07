@@ -1,17 +1,25 @@
 $card-width: 350px;
 
-.custom-card {
-    width: $card-width;
-    border-radius: 15px !important;
-    margin: auto;
-}
-.custom-card:hover {
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2vmin;
 }
 
 ::ng-deep .mat-card {
-    border-radius: 10px !important;
+    width: $card-width;
+    border-radius: 15px !important;
+    margin: auto;
+    margin-bottom: 20px;
     overflow: hidden;
+
+    object-fit: cover;
+    vertical-align: bottom;
+    border-radius: 1vmin;
+
+    :last-child{
+        flex-grow: 10;
+    }
 }
 
 .mat-card-image {
@@ -54,6 +62,7 @@ $card-width: 350px;
 }
 
 .mat-card:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
     .mat-card-image {
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
         transform: scale(1.03);

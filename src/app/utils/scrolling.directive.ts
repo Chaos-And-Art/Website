@@ -12,7 +12,7 @@ interface DOMRectI {
 }
 
 @Directive({
-    selector: '.scrollToCenter',
+    selector: '[scrollToCenter]',
 })
 export class MatTabScrollToCenterDirective {
 
@@ -35,7 +35,6 @@ export class MatTabScrollToCenterDirective {
         const leftXOffset = (window.innerWidth - scrolledButton.width) / 2;
         const currentVisibleViewportLeft = scrolledButton.left;
         const neededLeftOffset = currentVisibleViewportLeft - leftXOffset;
-        console.log(scrolledButton);
         const newValueToSCroll = currentScrolledContainerPosition + neededLeftOffset;
         return newValueToSCroll;
     }
