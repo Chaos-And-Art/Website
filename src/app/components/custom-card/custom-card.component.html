@@ -1,7 +1,7 @@
-<div class="flex-grid" *ngIf="router.url == '/Art'">
+<div class="Apps-Card-Container" *ngIf="router.url == '/Apps'">
     <mat-card *ngFor="let card of cards">
         <div>
-            <img mat-card-image [src]="card.imgSrc" alt="Photo of a Shiba Inu">
+            <img mat-card-image [src]="card.imgSrc">
         </div>
         <mat-card-content>
             <h4>{{card.id}}</h4>
@@ -17,15 +17,13 @@
     </mat-card>
 </div>
 
-<div class="custom-card" *ngIf="router.url == '/Apps'">
-    <mat-card>
+<div class="flex-grid" *ngIf="router.url == '/Chaos'">
+    <mat-card *ngFor="let card of cards">
         <div>
-            <img mat-card-image
-                src="https://images.pexels.com/photos/3299386/pexels-photo-3299386.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-                alt="Photo of a Shiba Inu">
+            <img mat-card-image [src]="card.imgSrc">
         </div>
         <mat-card-content>
-            <h4>Click to Play</h4>
+            <h4>{{card.id}}</h4>
             <h2>App 1</h2>
             <p> This is a temporary placeholder. This layout is not final. Available apps and games are
                 almost here! I appreciate you taking the time to explore my website. :)

@@ -28,6 +28,7 @@ import { CustomCardComponent } from './components/custom-card/custom-card.compon
 import { CarouselComponent } from './components/carousel/carousel.component';
 
 import { MatTabScrollToCenterDirective } from './utils/scrolling.directive';
+import { CustomImageComponent } from './components/custom-image/custom-image.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { MatTabScrollToCenterDirective } from './utils/scrolling.directive';
     CustomCardComponent,
     CarouselComponent,
 
-    MatTabScrollToCenterDirective
+    MatTabScrollToCenterDirective,
+     CustomImageComponent
   ],
   imports: [
     BrowserModule,

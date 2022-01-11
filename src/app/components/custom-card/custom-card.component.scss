@@ -1,9 +1,11 @@
 $card-width: 350px;
 
-.flex-grid {
+.Apps-Card-Container {
+    width: 100%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
-    margin: 2vmin;
+    justify-content: center;
 }
 
 ::ng-deep .mat-card {
@@ -12,19 +14,11 @@ $card-width: 350px;
     margin: auto;
     margin-bottom: 20px;
     overflow: hidden;
-
-    object-fit: cover;
-    vertical-align: bottom;
-    border-radius: 1vmin;
-
-    :last-child{
-        flex-grow: 10;
-    }
 }
 
 .mat-card-image {
-    transition: 1.2s;
-    width: $card-width;
+    transition: .8s;
+    width: $card-width + .3;
     height: 300px;
 }
 
@@ -55,7 +49,7 @@ $card-width: 350px;
     transition: 0.8s;
     opacity: 0;
     button img {
-        background-color: #333;
+        background-color: transparent;
         width: $card-width / 2.5;
         height: $card-width / 7;
     }
@@ -80,9 +74,6 @@ $card-width: 350px;
 }
 
 @media screen and (max-width: 375px) {
-    .custom-card {
-        width: 300px;
-    }
     .mat-card-actions {
         width: 92%;
         button img {
@@ -96,15 +87,35 @@ $card-width: 350px;
 }
 
 @media screen and (min-width: 768px) {
+    ::ng-deep .mat-card {
+        width: 325px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
+    ::ng-deep .mat-card {
+        width: 350px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
+    ::ng-deep .mat-card {
+        width: 375px;
+    }
+    .mat-card-image {
+        width: 375px + .5;
+        height: 325px;
+    }
 }
 
 @media screen and (min-width: 2560px) {
+    ::ng-deep .mat-card {
+        width: 325px;
+    }
+    .mat-card-image {
+        width: 325px + .5;
+        height: 250px;
+    }
 }
 
 /*#endregion*/
