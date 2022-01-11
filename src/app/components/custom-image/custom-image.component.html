@@ -1,0 +1,20 @@
+<div class="grid">
+    <div class="Art_Card flow" *ngFor="let image of images">
+        <!-- <img class="Details_Icon" src="/_Images-Videos/Icons/question.png"> -->
+        <img class="Card_Image lazy" [src]="image.imgSrc">
+        <div class="Card_Details">
+            <h2>Art Details</h2>
+            <p> This is a temporary placeholder. Future details for art will be placed here. I
+                appreciate you
+                taking
+                the time to explore my website.
+                :)
+            </p>
+        </div>
+        <div class="Card_Options">
+            <img class="Icon" src="/_Images-Videos/Icons/user.png">
+            <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
+            <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+        </div>
+    </div>
+</div>

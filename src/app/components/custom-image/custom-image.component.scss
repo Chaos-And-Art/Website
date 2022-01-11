@@ -1,0 +1,166 @@
+.Art_Card {
+    width: 100%;
+    position: relative;
+    grid-row-end: span var(--row-span, 20);
+}
+
+.Art_Card .Details_Icon {
+    width: 30px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    z-index: 1;
+    filter: invert(100%);
+}
+
+.Art_Card .Card_Image {
+    background-color: #eee;
+    width: 100%;
+    margin: auto;
+}
+
+.Art_Card video {
+    background-color: #eee;
+    width: 100%;
+    left: 0;
+}
+
+.Art_Card .Card_Details {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    padding: 0px 25px 0px 25px;
+    top: 15%;
+    margin-top: -35px;
+    transition: 0.5s;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+}
+
+.Art_Card .Card_Details h2 {
+    color: white;
+    font-size: 18px;
+}
+
+.Art_Card .Card_Details p {
+    width: 100%;
+    padding-top: 5px;
+    color: whitesmoke;
+    font-size: 14px;
+}
+
+.Art_Card .Card_Options {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    padding-top: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 9;
+}
+
+.Art_Card .Card_Options .Icon {
+    width: 20px;
+    top: 10px;
+    margin: 0 15px 0;
+    z-index: 1;
+    filter: invert(100%);
+}
+
+.Art_Card:hover .Card_Options {
+    opacity: 1;
+}
+
+.Art_Card .Details_Icon:hover ~ .Card_Image {
+    filter: brightness(50%);
+}
+
+.Art_Card .Details_Icon:hover ~ .Card_Details {
+    opacity: 1;
+    transform: translate(0, -15px);
+}
+
+.grid {
+    --gap: 10px;
+    --columns: 4;
+    max-width: 90%;
+    margin: 0 auto;
+    display: column;
+    columns: var(--columns);
+    gap: var(--gap);
+}
+
+.grid > * {
+    break-inside: avoid;
+    margin-bottom: var(--gap);
+}
+
+@supports (grid-template-rows: masonry) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(var(--columns), 1fr);
+        grid-template-rows: masonry;
+        grid-auto-flow: dense;
+        /* align-tracks: stretch; */
+    }
+
+    .grid > * {
+        margin-bottom: 0em;
+    }
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space, var(--spacer));
+}
+
+/*#region-----------------------Responsive_Layout-------------------------*/
+
+@media screen and (min-width: 320px) {
+    .grid {
+        --gap: 10px;
+        --columns: 1;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+}
+
+@media screen and (min-width: 425px) {
+}
+
+@media screen and (min-width: 768px) {
+    .grid {
+        --gap: 10px;
+        --columns: 2;
+        max-width: 95%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid {
+        --gap: 10px;
+        --columns: 3;
+        max-width: 95%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .grid {
+        --gap: 10px;
+        --columns: 4;
+        max-width: 90%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .grid {
+        --gap: 10px;
+        --columns: 5;
+        max-width: 90%;
+    }
+}
+
+/*#endregion*/
