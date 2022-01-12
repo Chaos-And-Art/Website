@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CustomCard} from 'src/app/models/customCard';
+import { CustomCard } from 'src/app/models/customCard';
 
 @Component({
   selector: 'app-custom-card',
@@ -12,6 +12,8 @@ export class CustomCardComponent implements OnInit {
   @Input() data: any;
 
   cards = new Array<CustomCard>();
+
+  default = "/assets/_misc/default.png";
 
   constructor(public router: Router) {
     this.cards.push(

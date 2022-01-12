@@ -1,7 +1,7 @@
 <div class="Apps-Card-Container" *ngIf="router.url == '/Apps'">
     <mat-card *ngFor="let card of cards">
         <div>
-            <img mat-card-image [src]="card.imgSrc">
+            <img mat-card-image [defaultImage]="default" [lazyLoad]="card.imgSrc">
         </div>
         <mat-card-content>
             <h4>{{card.id}}</h4>

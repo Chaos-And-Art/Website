@@ -14,15 +14,27 @@
 }
 
 .Art_Card .Card_Image {
-    background-color: #eee;
     width: 100%;
     margin: auto;
+    transition: image 1s ease-out;
 }
 
 .Art_Card video {
     background-color: #eee;
     width: 100%;
     left: 0;
+}
+
+img.ng-lazyloaded {
+    animation: fadein 1s;
+}
+@keyframes fadein {
+    from {
+        filter:blur(5px);
+    }
+    to {
+        filter:blur(0);
+    }
 }
 
 .Art_Card .Card_Details {
