@@ -14,7 +14,7 @@
         <ng-container class="items">
             <div class="item" *ngFor="let image of artImages" [class.hidden]="sliderHidden">
                 <a target="_blank" href="#">
-                    <img [src]="image.src" (load)="onImgLoadSuccess()" />
+                    <img [src]="image.imgSrc" (load)="onImgLoadSuccess()" />
                 </a>
             </div>
         </ng-container>

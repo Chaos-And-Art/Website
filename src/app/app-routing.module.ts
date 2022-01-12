@@ -14,6 +14,7 @@ import { TermsConditionsComponent } from './components/_pages/terms-conditions/t
 const routes: Routes = [
   { path: 'Dashboard', component: DashboardComponent },
   { path: 'Home', component: HomeComponent },
+  // { path: 'Home', loadChildren: () => import('./components/_pages/home/home.module').then(module => module.HomeModule) },
   { path: 'Chaos', component: ChaosComponent },
   { path: 'Art', component: ArtComponent },
   { path: 'Apps', component: AppsComponent },
@@ -21,7 +22,7 @@ const routes: Routes = [
   { path: 'Contact', component: ContactComponent },
   { path: 'Business-Information', component: BusinessInfoComponent },
   { path: 'Privacy-Policy', component: PrivacyPolicyComponent },
-  { path: 'Terms-And-Conditions', component: TermsConditionsComponent },
+  { path: 'Terms-And-Conditions', component: TermsConditionsComponent }
 ];
 
 @NgModule({

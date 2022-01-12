@@ -1,7 +1,7 @@
 <div class="grid">
     <div class="Art_Card flow" *ngFor="let image of images">
-        <!-- <img class="Details_Icon" src="/_Images-Videos/Icons/question.png"> -->
-        <img class="Card_Image lazy" [src]="image.imgSrc">
+        <img class="Details_Icon" src="/assets/icons/question.png">
+        <img class="Card_Image" [defaultImage]="image.imgLazy" [lazyLoad]="image.imgSrc">
         <div class="Card_Details">
             <h2>Art Details</h2>
             <p> This is a temporary placeholder. Future details for art will be placed here. I
@@ -12,9 +12,9 @@
             </p>
         </div>
         <div class="Card_Options">
-            <img class="Icon" src="/_Images-Videos/Icons/user.png">
-            <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/heart.png">
-            <img class="Icon" style="float: right;" src="/_Images-Videos/Icons/download.png">
+            <img class="Icon" style="padding-bottom: 5px; width: 22px;" src="/assets/icons/user.png">
+            <img class="Icon" style="float: right;" src="/assets/icons/heart.png">
+            <img class="Icon" style="float: right;" src="/assets/icons/download.png">
         </div>
     </div>
 </div>

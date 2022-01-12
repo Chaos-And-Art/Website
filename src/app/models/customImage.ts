@@ -1,4 +1,5 @@
 export interface CustomImage {
     id: number;
-    imgSrc:string;
+    imgSrc: string;
+    imgLazy: string;
 }

@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgParticlesModule } from 'ng-particles';
 import { NgxTinySliderModule } from 'ngx-tiny-slider';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -53,7 +54,7 @@ import { CustomImageComponent } from './components/custom-image/custom-image.com
     CarouselComponent,
 
     MatTabScrollToCenterDirective,
-     CustomImageComponent
+    CustomImageComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +65,8 @@ import { CustomImageComponent } from './components/custom-image/custom-image.com
     MatCardModule,
     MatTabsModule,
     NgParticlesModule,
-    NgxTinySliderModule
+    NgxTinySliderModule,
+    LazyLoadImageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

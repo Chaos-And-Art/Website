@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgxTinySliderInstanceInterface, NgxTinySliderSettingsInterface } from 'ngx-tiny-slider';
 import { BehaviorSubject, filter } from 'rxjs';
-import { CarouselArtImage } from 'src/app/models/carouselArtImage';
+import { CarouselImage } from 'src/app/models/carouselImage';
 
 @Component({
   selector: 'app-carousel',
@@ -10,7 +10,7 @@ import { CarouselArtImage } from 'src/app/models/carouselArtImage';
 })
 export class CarouselComponent implements OnInit {
   sliderHidden = true;
-  artImages = new Array<CarouselArtImage>();
+  artImages = new Array<CarouselImage>();
   tinySliderConfig!: NgxTinySliderSettingsInterface;
 
   imageLoadingProcess: BehaviorSubject<number> = new BehaviorSubject(0);
@@ -20,13 +20,13 @@ export class CarouselComponent implements OnInit {
 
   constructor() {
     this.artImages.push(
-      { id: 1, src: "https://images.pexels.com/photos/3299386/pexels-photo-3299386.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 2, src: "https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 3, src: "https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 4, src: "https://images.pexels.com/photos/2627945/pexels-photo-2627945.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 5, src: "https://images.pexels.com/photos/4311512/pexels-photo-4311512.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 6, src: "https://images.pexels.com/photos/7799298/pexels-photo-7799298.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 7, src: "https://images.pexels.com/photos/9723176/pexels-photo-9723176.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
+      { id: 1, imgSrc: "https://images.pexels.com/photos/3299386/pexels-photo-3299386.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
+      { id: 2, imgSrc: "https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
+      { id: 3, imgSrc: "https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
+      { id: 4, imgSrc: "https://images.pexels.com/photos/2627945/pexels-photo-2627945.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
+      { id: 5, imgSrc: "https://images.pexels.com/photos/4311512/pexels-photo-4311512.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
+      { id: 6, imgSrc: "https://images.pexels.com/photos/7799298/pexels-photo-7799298.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
+      { id: 7, imgSrc: "https://images.pexels.com/photos/9723176/pexels-photo-9723176.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
     )
   }
 
@@ -41,7 +41,7 @@ export class CarouselComponent implements OnInit {
       autoplay: true,
       autoplayTimeout: 6000,
       autoplayButtonOutput: false,
-      // lazyload: true,
+      lazyload: true,
       mouseDrag: true,
       controls: true,
       nav: false,

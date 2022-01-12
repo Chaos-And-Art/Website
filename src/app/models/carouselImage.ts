@@ -1,6 +1,6 @@
-export interface CarouselArtImage {
+export interface CarouselImage {
     id: number;
-    src: string;
+    imgSrc: string;
     title: string;
     alt: string;
 }

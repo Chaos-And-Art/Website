@@ -30,8 +30,7 @@
     width: 100%;
     margin: auto;
     padding: 0px 25px 0px 25px;
-    top: 15%;
-    margin-top: -35px;
+    top: 20%;
     transition: 0.5s;
     opacity: 0;
     pointer-events: none;
@@ -55,7 +54,7 @@
     position: absolute;
     bottom: 0px;
     padding-top: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     transition: 0.5s;
     opacity: 0;
     z-index: 9;
@@ -63,7 +62,6 @@
 
 .Art_Card .Card_Options .Icon {
     width: 20px;
-    top: 10px;
     margin: 0 15px 0;
     z-index: 1;
     filter: invert(100%);
@@ -74,7 +72,7 @@
 }
 
 .Art_Card .Details_Icon:hover ~ .Card_Image {
-    filter: brightness(50%);
+    filter: brightness(30%);
 }
 
 .Art_Card .Details_Icon:hover ~ .Card_Details {
