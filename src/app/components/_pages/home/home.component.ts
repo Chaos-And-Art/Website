@@ -9,26 +9,77 @@ import type { ISourceOptions } from "tsparticles";
 export class HomeComponent implements OnInit {
   width: number = (window.innerWidth > 0) ? window.innerWidth : screen.width;
   height: number = (window.innerHeight > 0) ? window.innerHeight : screen.height;
-  id = 'tsparticles';
+  colorTheme: any;
+  darkmode: boolean = false;
 
   constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+
+  }
+
+  private getColorTheme(): any {
+    if (localStorage.getItem('user-theme')) {
+      this.colorTheme = localStorage.getItem('user-theme');
+    } else {
+      this.colorTheme = 'light-mode';
+    }
+    return this.colorTheme;
+  }
 
   onExploreButton() {
     window.scrollTo({ left: 0, top: this.height / 1.1, behavior: 'smooth' })
   }
 
-  options: ISourceOptions = {
+  options : ISourceOptions = {
     fpsLimit: 60,
     fullScreen: {
       enable: false,
     },
-    background: {
-      color: {
-        value: "rgb(40, 40, 40)"
+    themes: [
+      {
+        name: "dark",
+        default: {
+          value: (this.getColorTheme() == "dark-mode") ? true : false,
+        },
+        options: {
+          background: {
+            color: "rgb(40, 40,40)"
+          },
+          particles: {
+            color: {
+              value: "#fff"
+            },
+            links: {
+              color: {
+                value: "#fff"
+              }
+            }
+          },
+        },
       },
-    },
+      {
+        name: "light",
+        default: {
+          value: (this.getColorTheme() == "light-mode") ? true : false,
+        },
+        options: {
+          background: {
+            color: "rgb(240, 240,240)"
+          },
+          particles: {
+            color: {
+              value: "#111"
+            },
+            links: {
+              color: {
+                value: "#111"
+              }
+            }
+          },
+        },
+      }
+    ],
     interactivity: {
       events: {
         onClick: {
@@ -58,18 +109,14 @@ export class HomeComponent implements OnInit {
         connect: {
           distance: 100,
           links: {
-            opacity: .5,
+            opacity: .05,
           },
           radius: 100,
         }
       }
     },
     particles: {
-      color: {
-        value: "#fff"
-      },
       links: {
-        color: "#fff",
         distance: 125,
         enable: true,
         opacity: 0.5,
@@ -106,4 +153,5 @@ export class HomeComponent implements OnInit {
     },
     detectRetina: true
   };
+
 }

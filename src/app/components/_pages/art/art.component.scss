@@ -2,13 +2,9 @@
     padding: 75px 0 25px;
     margin: auto;
     text-align: center;
-    background-color: #333;
-    color: #ddd;
 }
 
 ::ng-deep .mat-tab-group {
-    background-color: #333;
-    color: #ccc;
     .mat-tab-header {
         margin: 6px;
         ::-webkit-scrollbar {
@@ -25,7 +21,6 @@
                 transform: none !important;
                 .mat-tab-labels {
                     .mat-tab-label {
-                        color: #ddd !important;
                         padding: 1.25% !important;
                         margin: 0px !important;
                         text-transform: uppercase;
@@ -34,7 +29,7 @@
                         min-width: 140px !important;
                     }
                     .mat-tab-label-active {
-                        color: white !important;
+                        // color: white !important;
                     }
                 }
             }

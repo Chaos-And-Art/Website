@@ -1,0 +1,224 @@
+.carousel {
+    border-radius: 10px;
+    width: 98%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0px 10px 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.carousel .carousel-title {
+    position: relative;
+    top: 12px;
+}
+
+.art-slider .item img {
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+}
+
+.controls {
+    height: 0;
+    position: relative;
+    width: 100%;
+    top: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    .next img {
+        width: 25px;
+        padding: 5px 0 5px 5px;
+        background: rgba(255, 255, 255, 0.6);
+        filter: invert(1);
+        border-radius: 8px 0 0 8px;
+    }
+    .prev img {
+        width: 25px;
+        padding: 5px 5px 5px 0;
+        background: rgba(255, 255, 255, 0.6);
+        filter: invert(1);
+        border-radius: 0 8px 8px 0;
+    }
+    :hover {
+        cursor: pointer;
+    }
+}
+
+.View_More_Button {
+    width: 45%;
+    margin: auto;
+    // color: #ccc;
+    background: none;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 5px 15px 5px;
+    border: solid 1px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.View_More_Button:hover,
+.View_More_Button:focus,
+.View_More_Button:active {
+    background: #bbb !important;
+    border-color: #bbb !important;
+    color: black;
+}
+
+/*#region-----------------------Responsive_Layout-------------------------*/
+
+@media screen and (min-width: 320px) {
+    .art-slider .item img {
+        width: 270px;
+        height: 200px;
+    }
+    .controls {
+        top: 120px;
+        .next img {
+            width: 20px;
+            padding: 5px 0 5px 5px;
+        }
+        .prev img {
+            width: 20px;
+            padding: 5px 5px 5px 0;
+        }
+    }
+    .View_More_Button {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .art-slider .item img {
+        width: 350px;
+        height: 250px;
+    }
+    .controls {
+        top: 150px;
+        .next img {
+            width: 25px;
+            padding: 5px 0 5px 5px;
+        }
+        .prev img {
+            width: 25px;
+            padding: 5px 5px 5px 0;
+        }
+    }
+    .View_More_Button {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .art-slider .item img {
+        width: 350px;
+        height: 250px;
+    }
+    .controls {
+        top: 160px;
+        .next img {
+            width: 25px;
+            padding: 5px 0 5px 5px;
+        }
+        .prev img {
+            width: 25px;
+            padding: 5px 5px 5px 0;
+        }
+    }
+    .View_More_Button {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .art-slider .item img {
+        width: 400px;
+        height: 250px;
+    }
+    .controls {
+        top: 160px;
+        .next img {
+            width: 25px;
+            padding: 5px 0 5px 5px;
+        }
+        .prev img {
+            width: 25px;
+            padding: 5px 5px 5px 0;
+        }
+    }
+    .View_More_Button {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .art-slider .item img {
+        width: 425px;
+        height: 275px;
+    }
+    .controls {
+        top: 160px;
+        .next img {
+            width: 25px;
+            padding: 5px 0 5px 5px;
+        }
+        .prev img {
+            width: 25px;
+            padding: 5px 5px 5px 0;
+        }
+    }
+    .View_More_Button {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .art-slider .item img {
+        width: 460px;
+        height: 275px;
+    }
+    .controls {
+        top: 160px;
+        .next img {
+            width: 25px;
+            padding: 5px 0 5px 5px;
+        }
+        .prev img {
+            width: 25px;
+            padding: 5px 5px 5px 0;
+        }
+    }
+    .View_More_Button {
+        width: 15%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .art-slider .item img {
+        width: 550px;
+        height: 350px;
+    }
+    .controls {
+        top: 160px;
+        .next img {
+            width: 25px;
+            padding: 5px 0 5px 5px;
+        }
+        .prev img {
+            width: 25px;
+            padding: 5px 5px 5px 0;
+        }
+    }
+    .View_More_Button {
+        width: 10%;
+    }
+}
+
+/*#endregion*/

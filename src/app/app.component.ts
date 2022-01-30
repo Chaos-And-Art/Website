@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { NavigationEnd, Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title: string = 'Chaos & Art';
 
   constructor(public router: Router) {
@@ -14,9 +14,10 @@ export class AppComponent {
       if (event instanceof NavigationEnd) {
         window.scrollTo(0, 0);
       }
-      // if (e.constructor.name)==="login"{ // for example
-      //   window.scroll(0,0);
-// }
     });
+  }
+
+  ngOnInit(): void {
+
   }
 }
