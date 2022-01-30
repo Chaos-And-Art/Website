@@ -7,12 +7,7 @@
     width: 85%;
     height: auto;
     margin: auto;
-    color: #ddd;
-    background: #111;
-    opacity: 0.9;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding: 15px;
+    opacity: 0.8;
     border-radius: 10px;
     text-align: center;
     position: absolute;
@@ -21,33 +16,21 @@
     transform: translate(-50%, -50%);
 }
 
-.Home_Cover_Button {
+.mat-stroked-button {
     width: 45%;
     margin: auto;
-    color: #ddd;
     background: none;
     margin-top: 15px;
-    margin-bottom: 15px;
-    padding: 5px 15px 5px;
-    border: solid 1px #ddd;
+    margin-bottom: 5px;
+    border: solid 1px;
     border-radius: 12px;
-    font-size: 14px;
-}
-
-.Home_Cover_Button:hover,
-.Home_Cover_Button:focus,
-.Home_Cover_Button:active {
-    background: #bbb !important;
-    border-color: #bbb !important;
-    color: black;
+    font-weight: 400;
 }
 
 .Box {
     width: 98%;
     height: auto;
     margin: auto;
-    // background: #222;
-    // color: #bbb;
     margin-top: 20px;
     margin-bottom: 15px;
     padding: 10px 15px 5px;
@@ -68,6 +51,7 @@
 @media screen and (min-width: 375px) {
     .Home_Cover {
         width: 75%;
+        top: 30%;
     }
     .Box {
         p {
@@ -128,6 +112,7 @@
 @media screen and (min-width: 1440px) {
     .Home_Cover {
         width: 22%;
+        top: 35%;
     }
     .Box {
         p {

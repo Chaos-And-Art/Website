@@ -51,25 +51,15 @@
     }
 }
 
-.View_More_Button {
+.mat-stroked-button {
     width: 45%;
     margin: auto;
-    // color: #ccc;
     background: none;
     margin-top: 15px;
     margin-bottom: 5px;
-    padding: 5px 15px 5px;
     border: solid 1px;
     border-radius: 12px;
-    font-size: 14px;
-}
-
-.View_More_Button:hover,
-.View_More_Button:focus,
-.View_More_Button:active {
-    background: #bbb !important;
-    border-color: #bbb !important;
-    color: black;
+    font-weight: 400;
 }
 
 /*#region-----------------------Responsive_Layout-------------------------*/
@@ -90,7 +80,7 @@
             padding: 5px 5px 5px 0;
         }
     }
-    .View_More_Button {
+    .mat-stroked-button {
         width: 45%;
     }
 }
@@ -111,7 +101,7 @@
             padding: 5px 5px 5px 0;
         }
     }
-    .View_More_Button {
+    .mat-stroked-button {
         width: 45%;
     }
 }
@@ -132,7 +122,7 @@
             padding: 5px 5px 5px 0;
         }
     }
-    .View_More_Button {
+    .mat-stroked-button {
         width: 40%;
     }
 }
@@ -153,7 +143,7 @@
             padding: 5px 5px 5px 0;
         }
     }
-    .View_More_Button {
+    .mat-stroked-button {
         width: 25%;
     }
 }
@@ -174,7 +164,7 @@
             padding: 5px 5px 5px 0;
         }
     }
-    .View_More_Button {
+    .mat-stroked-button {
         width: 20%;
     }
 }
@@ -195,7 +185,7 @@
             padding: 5px 5px 5px 0;
         }
     }
-    .View_More_Button {
+    .mat-stroked-button {
         width: 15%;
     }
 }
@@ -216,7 +206,7 @@
             padding: 5px 5px 5px 0;
         }
     }
-    .View_More_Button {
+    .mat-stroked-button {
         width: 10%;
     }
 }
