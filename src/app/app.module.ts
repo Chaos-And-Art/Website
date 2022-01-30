@@ -26,7 +26,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PopupsComponent } from './components/popups/popups.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CustomCardComponent } from './components/custom-card/custom-card.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
+import { ArtCarouselComponent } from './components/carousel/art-carousel.component';
+import { AppsCarouselComponent } from './components/carousel/apps-carousel.component';
 
 import { MatTabScrollToCenterDirective } from './utils/scrolling.directive';
 import { CustomImageComponent } from './components/custom-image/custom-image.component';
@@ -51,10 +52,11 @@ import { CustomImageComponent } from './components/custom-image/custom-image.com
     PopupsComponent,
     FooterComponent,
     CustomCardComponent,
-    CarouselComponent,
+    ArtCarouselComponent,
 
     MatTabScrollToCenterDirective,
-    CustomImageComponent
+    CustomImageComponent,
+    AppsCarouselComponent
   ],
   imports: [
     BrowserModule,

@@ -1690,6 +1690,13 @@ ajv@^8.0.0, ajv@^8.8.0:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
+angular-dark-mode@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/angular-dark-mode/-/angular-dark-mode-3.0.2.tgz#e8f6d69c6eb73fbfd6af8b613f79697518f6d67d"
+  integrity sha512-0ONukKXAnfmnJnNeJN94xn9C8tPQPp6s16+t0iq1RWqk08Q5mgtH7g1rkYKVbHSWbMLQUKvChGOWJL/2LvbqKg==
+  dependencies:
+    tslib "^2.0.0"
+
 ansi-colors@4.1.1:
   version "4.1.1"
   resolved "https://registry.npmjs.org/ansi-colors/-/ansi-colors-4.1.1.tgz"

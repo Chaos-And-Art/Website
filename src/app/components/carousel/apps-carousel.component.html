@@ -1,0 +1,23 @@
+<div class="carousel">
+    <h2 class="carousel-title">APPS</h2>
+    <div class="controls" id="apps-controls" tabindex="0">
+        <div class="prev" data-controls="prev" tabindex="-1">
+            <img src="/assets/icons/arrow_left.png">
+        </div>
+        <div class="next" data-controls="next" tabindex="-1">
+            <img src="/assets/icons/arrow_right.png">
+        </div>
+    </div>
+
+
+    <ngx-tiny-slider [config]="appsTinySliderConfig" #sliderLazy class="art-slider">
+        <ng-container class="items">
+            <div class="item" *ngFor="let image of appImages" [class.hidden]="sliderHidden">
+                <a target="_blank" href="#">
+                    <img [src]="image.imgSrc" (load)="onImgLoadSuccess()" />
+                </a>
+            </div>
+        </ng-container>
+    </ngx-tiny-slider>
+    <button class="View_More_Button" routerLink="/Apps">View More Apps</button>
+</div>
