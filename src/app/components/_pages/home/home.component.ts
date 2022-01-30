@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     window.scrollTo({ left: 0, top: this.height / 1.1, behavior: 'smooth' })
   }
 
-  options : ISourceOptions = {
+  options: ISourceOptions = {
     fpsLimit: 60,
     fullScreen: {
       enable: false,
@@ -65,15 +65,15 @@ export class HomeComponent implements OnInit {
         },
         options: {
           background: {
-            color: "rgb(240, 240,240)"
+            color: "rgb(250, 250, 250)"
           },
           particles: {
             color: {
-              value: "#111"
+              value: "#000"
             },
             links: {
               color: {
-                value: "#111"
+                value: "#000"
               }
             }
           },
@@ -109,7 +109,7 @@ export class HomeComponent implements OnInit {
         connect: {
           distance: 100,
           links: {
-            opacity: .05,
+            opacity: .8,
           },
           radius: 100,
         }

@@ -31,6 +31,24 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
 
 .light-mode {
   @include angular-material-theme($app-light-theme);
+
+  .Dashboard {
+    background: radial-gradient(circle farthest-corner at 10% 20%, rgb(174, 200, 212) 0%, rgb(100, 127, 131) 90%);
+
+    .Dashboard-Links a {
+      background: #eee;
+      color: black;
+      border: solid 2px #eee;
+    }
+
+    .Dashboard-Links a:hover,
+    .Dashboard-Links a:focus,
+    .Dashboard-Links a:active {
+      background: #ccc !important;
+      border-color: #ccc !important;
+      color: #333;
+    }
+  }
 }
 
 .dark-mode {
@@ -39,12 +57,30 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
   background-color: #333;
   color: whitesmoke;
 
-  .Box{
+  .Box {
     background-color: #222;
   }
 
-  .carousel{
+  .carousel {
     background-color: #222;
+  }
+
+  .Dashboard {
+    background: radial-gradient(circle farthest-corner at 10% 20%, rgb(112, 144, 161) 0%, rgb(24, 37, 39) 90%);
+
+    .Dashboard-Links a {
+      background: #333;
+      color: whitesmoke;
+      border: solid 2px #333;
+    }
+
+    .Dashboard-Links a:hover,
+    .Dashboard-Links a:focus,
+    .Dashboard-Links a:active {
+      background: #222 !important;
+      border-color: #222 !important;
+      color: #ddd;
+    }
   }
 }
 

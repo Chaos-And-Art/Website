@@ -1,9 +1,9 @@
-<div class="Home_Cover">
+<mat-card class="Home_Cover">
     <h2>Chaos & Art</h2>
     <p>Creations derived from time</p>
 
-    <button class="Home_Cover_Button" (click)="onExploreButton();">Explore</button>
-</div>
+    <button mat-stroked-button  (click)="onExploreButton();">Explore</button>
+</mat-card>
 
 <div class="background">
     <ng-particles id="tsparticles" [options]="options"></ng-particles>
@@ -17,7 +17,7 @@
         something exciting or thrilling while exploring them. :)
     </p>
 
-    <button routerLink="/Chaos" class="Home_Cover_Button">Chaos Projects</button>
+    <button mat-stroked-button routerLink="/Chaos" >Chaos Projects</button>
 </div>
 
 <app-art-carousel></app-art-carousel>
