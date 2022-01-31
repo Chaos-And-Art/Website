@@ -28,16 +28,17 @@ export class ThemingService {
     return this.colorTheme === 'dark-mode';
   }
 
-  private setColorTheme(theme:any) {
+  private setColorTheme(theme: any) {
     this.colorTheme = theme;
     localStorage.setItem('user-theme', theme);
   }
 
-  private getColorTheme() {
+  getColorTheme(): any {
     if (localStorage.getItem('user-theme')) {
       this.colorTheme = localStorage.getItem('user-theme');
     } else {
       this.colorTheme = 'light-mode';
     }
+    return this.colorTheme;
   }
 }

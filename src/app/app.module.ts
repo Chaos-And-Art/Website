@@ -5,6 +5,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatIconModule } from '@angular/material/icon';
 import { NgParticlesModule } from 'ng-particles';
 import { NgxTinySliderModule } from 'ngx-tiny-slider';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
@@ -31,6 +33,7 @@ import { AppsCarouselComponent } from './components/carousel/apps-carousel.compo
 
 import { MatTabScrollToCenterDirective } from './utils/scrolling.directive';
 import { CustomImageComponent } from './components/custom-image/custom-image.component';
+import { BlankComponent } from './components/_pages/blank/blank.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,8 @@ import { CustomImageComponent } from './components/custom-image/custom-image.com
 
     MatTabScrollToCenterDirective,
     CustomImageComponent,
-    AppsCarouselComponent
+    AppsCarouselComponent,
+    BlankComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +70,8 @@ import { CustomImageComponent } from './components/custom-image/custom-image.com
     MatButtonModule,
     MatCardModule,
     MatTabsModule,
+    MatSlideToggleModule,
+    MatIconModule,
     NgParticlesModule,
     NgxTinySliderModule,
     LazyLoadImageModule

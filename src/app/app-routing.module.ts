@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppsComponent } from './components/_pages/apps/apps.component';
 import { ArtComponent } from './components/_pages/art/art.component';
+import { BlankComponent } from './components/_pages/blank/blank.component';
 import { BusinessInfoComponent } from './components/_pages/business-info/business-info.component';
 import { ChaosComponent } from './components/_pages/chaos/chaos.component';
 import { ContactComponent } from './components/_pages/contact/contact.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'Contact', component: ContactComponent },
   { path: 'Business-Information', component: BusinessInfoComponent },
   { path: 'Privacy-Policy', component: PrivacyPolicyComponent },
-  { path: 'Terms-And-Conditions', component: TermsConditionsComponent }
+  { path: 'Terms-And-Conditions', component: TermsConditionsComponent },
+  { path: 'blank', component: BlankComponent }
 ];
 
 @NgModule({

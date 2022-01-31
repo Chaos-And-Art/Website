@@ -2,7 +2,21 @@
     width: 100%;
     height: 100vh;
     text-align: center;
-    // background: radial-gradient(circle farthest-corner at 10% 20%, rgb(203, 236, 255) 0%, rgb(33, 59, 63) 90%);
+}
+
+.Theme-Slider {
+    margin: auto;
+    padding: 15px;
+    text-align: right;
+    .mat-icon {
+        padding-top: 6px;
+    }
+    .Theme-Name {
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: 6px;
+        font-weight: bold;
+    }
 }
 
 .Dashboard-Logo {

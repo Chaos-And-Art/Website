@@ -49,6 +49,62 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
       color: #333;
     }
   }
+
+  .Header {
+    background: whitesmoke;
+    .Company-Name {
+      color: #333;
+    }
+    .Top-Nav {
+      .Nav_Button {
+        color: #888;
+        &:hover {
+          color: #444;
+        }
+      }
+      .Active-Page {
+        color: black;
+      }
+    }
+  }
+
+  .Side_Nav {
+    background: whitesmoke;
+    .Nav_Button {
+      color: #333;
+    }
+    .Active-Page {
+      color: black;
+    }
+    .Side_Nav_Border {
+      background-color: #333;
+    }
+    .Side_Nav_Dashboard {
+      color: #333;
+      border: solid 2px #333;
+    }
+    .Side_Nav_Contact {
+      color: #333;
+      border: solid 2px #333;
+    }
+  }
+
+  label.Nav_Menu > i {
+    background-color: #333;
+  }
+
+  label.Nav_Menu > i:before,
+  label.Nav_Menu > i:after {
+    background-color: #333;
+  }
+
+  .Top-Theme-Slider-Background {
+    background: rgb(255, 255, 255, 0);
+    :hover {
+      background: rgb(255, 255, 255, 1);
+      cursor: pointer;
+    }
+  }
 }
 
 .dark-mode {
@@ -80,6 +136,62 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
       background: #222 !important;
       border-color: #222 !important;
       color: #ddd;
+    }
+  }
+
+  .Header {
+    background: rgb(33, 37, 41);
+    .Company-Name {
+      color: #ddd;
+    }
+    .Top-Nav {
+      .Nav_Button {
+        color: #aaa;
+        &:hover {
+          color: #eee;
+        }
+      }
+      .Active-Page {
+        color: white;
+      }
+    }
+  }
+
+  .Side_Nav {
+    background: rgb(33, 37, 41);
+    .Nav_Button {
+      color: #aaa;
+    }
+    .Active-Page {
+      color: white;
+    }
+    .Side_Nav_Border {
+      background-color: #aaa;
+    }
+    .Side_Nav_Dashboard {
+      color: #aaa;
+      border: solid 2px #aaa;
+    }
+    .Side_Nav_Contact {
+      color: #aaa;
+      border: solid 2px #aaa;
+    }
+  }
+
+  label.Nav_Menu > i {
+    background-color: #ccc;
+  }
+
+  label.Nav_Menu > i:before,
+  label.Nav_Menu > i:after {
+    background-color: #ccc;
+  }
+
+  .Top-Theme-Slider-Background {
+    background: rgb(0, 0, 0, 0);
+    :hover {
+      background: rgb(0, 0, 0, 1);
+      cursor: pointer;
     }
   }
 }
