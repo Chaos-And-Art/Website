@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemingService } from 'src/app/theming.service';
 import type { ISourceOptions } from "tsparticles";
 
 @Component({
@@ -12,19 +13,12 @@ export class HomeComponent implements OnInit {
   colorTheme: any;
   darkmode: boolean = false;
 
-  constructor() { }
+  constructor(private themeService: ThemingService) {
+    this.themeService.initTheme();
+  }
 
   ngOnInit(): void {
 
-  }
-
-  private getColorTheme(): any {
-    if (localStorage.getItem('user-theme')) {
-      this.colorTheme = localStorage.getItem('user-theme');
-    } else {
-      this.colorTheme = 'light-mode';
-    }
-    return this.colorTheme;
   }
 
   onExploreButton() {
@@ -40,7 +34,7 @@ export class HomeComponent implements OnInit {
       {
         name: "dark",
         default: {
-          value: (this.getColorTheme() == "dark-mode") ? true : false,
+          value: (this.themeService.getColorTheme() == "dark-mode") ? true : false,
         },
         options: {
           background: {
@@ -61,7 +55,7 @@ export class HomeComponent implements OnInit {
       {
         name: "light",
         default: {
-          value: (this.getColorTheme() == "light-mode") ? true : false,
+          value: (this.themeService.getColorTheme() == "light-mode") ? true : false,
         },
         options: {
           background: {

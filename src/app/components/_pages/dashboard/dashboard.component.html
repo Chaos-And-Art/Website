@@ -1,6 +1,15 @@
 <div class="Dashboard">
 
-    <input id="darkMode" type="checkbox" (change)="toggleDarkMode()" />
+    <div class="Theme-Slider">
+        <mat-slide-toggle [checked]="isDarkModeInit" labelPosition="before" (change)="toggleDarkMode()">
+            <mat-icon *ngIf="isDarkModeInit">dark_mode</mat-icon>
+            <mat-icon *ngIf="!isDarkModeInit">brightness_7</mat-icon>
+        </mat-slide-toggle>
+        <div class="Theme-Name">
+            <p *ngIf="isDarkModeInit">Dark Mode</p>
+            <p *ngIf="!isDarkModeInit">Light Mode</p>
+        </div>
+    </div>
 
     <div class="Dashboard-Logo">
         <img src="/assets/_misc/Silhouette_small.png">

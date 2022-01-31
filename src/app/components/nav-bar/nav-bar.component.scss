@@ -1,57 +1,64 @@
 /*#region-----------------------Navigation_Bar----------------------------*/
 
+.Top-Theme-Slider {
+    border-radius: 0 0 0 12px;
+    position: fixed;
+    margin: auto;
+    top: 45px;
+    right: 1px;
+    padding: 15px;
+    .mat-icon {
+        padding-top: 6px;
+    }
+    .Theme-Name {
+        font-size: 12px;
+        margin-left: 3px;
+        font-weight: bold;
+        height: 15px;
+    }
+    :hover {
+        background-color: transparent;
+    }
+}
+
 .Header {
     position: fixed;
     width: 100%;
     overflow: hidden;
     z-index: 2;
     top: 0;
-    background: rgb(33, 37, 41);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-}
 
-// .Header .Header-Social {
-//     position: absolute;
-//     top: 9px;
-//     left: 27%;
-//     width: 125px;
-//     text-align: center;
-//     font-size: 18px;
-// }
+    .Company-Name {
+        float: right;
+        padding: 5px 20px;
+        font-size: 24px;
+        font-weight: 600;
+        text-decoration: none;
+    }
 
-.Company-Name {
-    float: right;
-    padding: 5px 20px;
-    font-size: 24px;
-    font-weight: 600;
-    color: #ddd;
-    text-decoration: none;
-}
+    .Top-Nav {
+        padding-left: 15px;
+        padding-top: 5px;
 
-.Top-Nav {
-    padding-left: 15px;
-    padding-top: 5px;
-}
+        .Nav_Button {
+            float: left;
+            padding: 2px 20px;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
 
-.Top-Nav .Nav_Button {
-    float: left;
-    padding: 2px 20px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #aaa;
-    text-decoration: none;
-}
+            &:hover {
+                // color: #eee !important;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        }
 
-.Nav_Button:hover {
-    color: #eee !important;
-    /* background-color: #ccc; */
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.Top-Nav .Active-Page {
-    color: white;
-    text-decoration-line: underline;
+        .Active-Page {
+            text-decoration-line: underline;
+        }
+    }
 }
 
 /* //////////////////////////////////////////////////////////////////////////// */
@@ -66,7 +73,6 @@
     transform: translate(-100vw, 0);
     padding-top: 60px;
     transition: width 475ms ease-out, transform 450ms ease, border-radius 0.8s 0.1s ease;
-    background: rgb(33, 37, 41);
 }
 
 .Side_Nav .Nav_Button {
@@ -75,14 +81,12 @@
     text-decoration: none;
     font-size: 25px;
     font-weight: 600;
-    color: #aaa;
     padding: 8px 16px;
     border-radius: 10px;
     cursor: pointer;
 }
 
 .Side_Nav .Active-Page {
-    color: white;
     text-decoration-line: underline;
     text-decoration-style: dotted;
 }
@@ -98,7 +102,6 @@
     bottom: 225px;
     left: 10px;
     color: transparent;
-    background-color: #aaa;
 }
 
 .Side_Nav_Dashboard {
@@ -108,11 +111,10 @@
     bottom: 175px;
     right: 30px;
     background: transparent;
-    color: #aaa;
     border-radius: 15px;
-    border: solid 2px #aaa;
     font-size: 15px;
     font-weight: bold;
+    text-align: center;
     text-decoration: none;
 }
 
@@ -123,29 +125,29 @@
     bottom: 125px;
     right: 30px;
     background: transparent;
-    color: #aaa;
     border-radius: 15px;
-    border: solid 2px #aaa;
     font-size: 15px;
     font-weight: bold;
+    text-align: center;
     text-decoration: none;
 }
 
-.Side_Nav_Closer {
-    width: 100%;
-    text-align: center;
-    font-size: 30px;
-}
-
-.Side_Nav_Closer a {
-    transform: translatex(-50vw);
-}
-
-.Side_Nav_Closer i {
-    padding: 12px;
-    margin-top: 75px;
-    color: black;
-    transform: translatex(-50vw);
+.Side-Theme-Slider {
+    position: fixed;
+    bottom: 215px;
+    margin: auto;
+    padding: 8px 16px;
+    .mat-icon {
+        padding-top: 6px;
+    }
+    .Theme-Name {
+        font-size: 12px;
+        margin-left: 6px;
+        font-weight: bold;
+    }
+    :hover {
+        background-color: transparent;
+    }
 }
 
 /* //////////////////////////////////////////////////////////////////////// */
@@ -171,7 +173,7 @@ label.Nav_Menu > i {
     width: 100%;
     height: 3px;
     top: 50%;
-    background-color: #ccc;
+    // background-color: #ccc;
     pointer-events: auto;
     transition-duration: 0.25s;
     transition-delay: 0.25s;
@@ -184,7 +186,7 @@ label.Nav_Menu > i:after {
     width: 100%;
     height: 3px;
     left: 50%;
-    background-color: #ccc;
+    // background-color: #ccc;
     content: "";
     transition: transform 0.35s;
 }
@@ -219,6 +221,9 @@ label.Nav_Menu {
     .navbarTopNav {
         display: none !important;
     }
+    .Top-Theme-Slider {
+        display: none !important;
+    }
 }
 
 /*#region-----------------------Nav_Menu-Animations----------------------------*/
@@ -228,10 +233,6 @@ input.Nav_Menu:checked ~ .Side_Nav {
 }
 
 input.Nav_Menu:checked ~ .Side_Nav .Side_Nav_Content .Side_Nav_Links a {
-    transform: translatex(0);
-}
-
-input.Nav_Menu:checked ~ .Side_Nav .Side_Nav_Content .Side_Nav_Closer i {
     transform: translatex(0);
 }
 
@@ -263,10 +264,6 @@ input.Nav_Menu:checked ~ .Side_Nav .Side_Nav_Content .Side_Nav_Links a:nth-child
 
 input.Nav_Menu:checked ~ .Side_Nav .Side_Nav_Content .Side_Nav_Links a:nth-child(5) {
     transition: transform 0.8s 0.25s cubic-bezier(0.29, 1.6, 0.44, 0.96);
-}
-
-input.Nav_Menu:checked ~ .Side_Nav .Side_Nav_Content .Side_Nav_Closer i:nth-child(1) {
-    transition: transform 0.8s 0.3s cubic-bezier(0.29, 1.6, 0.44, 0.96);
 }
 
 input.Nav_Menu:checked ~ .Side_Nav .Side_Nav_Content .Side_Nav_Closer .Side_Nav_Contact:nth-child(2) {
