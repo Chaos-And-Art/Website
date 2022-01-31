@@ -1,6 +1,6 @@
 .Dashboard {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     text-align: center;
 }
 
@@ -20,7 +20,6 @@
 }
 
 .Dashboard-Logo {
-    padding-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,9 +77,6 @@
 }
 
 @media screen and (min-width: 375px) {
-    .Dashboard-Logo {
-        padding-top: 75px;
-    }
     .Dashboard-Logo img {
         width: 85px;
         height: 85px;
@@ -99,9 +95,6 @@
 }
 
 @media screen and (min-width: 425px) {
-    .Dashboard-Logo {
-        padding-top: 50px;
-    }
     .Dashboard-Logo img {
         width: 85px;
         height: 85px;
@@ -120,7 +113,7 @@
 
 @media screen and (min-width: 768px) {
     .Dashboard {
-        height: 110vh;
+        height: 111vh;
     }
     .Dashboard-Logo img {
         width: 85px;
@@ -139,9 +132,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .Dashboard-Logo {
-        padding-top: 50px;
-    }
     .Dashboard-Logo img {
         width: 100px;
         height: 100px;
