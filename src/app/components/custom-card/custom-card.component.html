@@ -1,5 +1,5 @@
 <div class="Apps-Card-Container" *ngIf="router.url == '/Apps'">
-    <mat-card *ngFor="let card of cards">
+    <mat-card *ngFor="let card of cardData">
         <div>
             <img mat-card-image [defaultImage]="default" [lazyLoad]="card.imgSrc">
         </div>
@@ -18,7 +18,7 @@
 </div>
 
 <div class="flex-grid" *ngIf="router.url == '/Chaos'">
-    <mat-card *ngFor="let card of cards">
+    <mat-card *ngFor="let card of cardData">
         <div>
             <img mat-card-image [src]="card.imgSrc">
         </div>

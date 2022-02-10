@@ -17,8 +17,8 @@ $card-width: 350px;
 }
 
 .mat-card-image {
-    transition: .8s;
-    width: $card-width + .3;
+    transition: 0.8s;
+    width: $card-width + 0.3;
     height: 300px;
 }
 
@@ -50,8 +50,8 @@ $card-width: 350px;
     opacity: 0;
     button img {
         background-color: transparent;
-        width: $card-width / 2.5;
-        height: $card-width / 7;
+        width: calc($card-width / 2.5);
+        height: calc($card-width / 7);
     }
 }
 
@@ -77,8 +77,8 @@ $card-width: 350px;
     .mat-card-actions {
         width: 92%;
         button img {
-            width: $card-width / 2.9;
-            height: $card-width / 8.1;
+            width: calc($card-width / 2.9);
+            height: calc($card-width / 8.1);
         }
     }
 }
@@ -103,7 +103,7 @@ $card-width: 350px;
         width: 375px;
     }
     .mat-card-image {
-        width: 375px + .5;
+        width: 375px + 0.5;
         height: 325px;
     }
 }
@@ -113,7 +113,7 @@ $card-width: 350px;
         width: 325px;
     }
     .mat-card-image {
-        width: 325px + .5;
+        width: 325px + 0.5;
         height: 250px;
     }
 }

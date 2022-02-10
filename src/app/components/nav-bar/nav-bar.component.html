@@ -1,6 +1,6 @@
 <div class="Top-Theme-Slider-Background">
     <div class="Top-Theme-Slider">
-        <mat-slide-toggle [checked]="isDarkModeInit" labelPosition="before" (change)="toggleDarkMode()">
+        <mat-slide-toggle color="primary" [checked]="isDarkModeInit" labelPosition="before" (change)="toggleDarkMode()">
             <mat-icon *ngIf="isDarkModeInit">dark_mode</mat-icon>
             <mat-icon *ngIf="!isDarkModeInit">brightness_7</mat-icon>
         </mat-slide-toggle>
@@ -37,8 +37,15 @@
             <a (click)="clickOut(); openMusicDialog();" class="Nav_Button">Music</a>
         </div>
 
+        <div class="Side_Nav_Closer">
+            <div class="Side_Nav_Border_1">-</div>
+            <a class="Side_Nav_Contact" routerLink="/Contact">CONTACT US</a>
+            <a class="Side_Nav_Dashboard" routerLink="/">DASHBOARD</a>
+            <div class="Side_Nav_Border_2">-</div>
+        </div>
+
         <div class="Side-Theme-Slider">
-            <mat-slide-toggle [checked]="isDarkModeInit" labelPosition="before" (change)="toggleDarkMode()">
+            <mat-slide-toggle color="primary" [checked]="isDarkModeInit" labelPosition="before" (change)="toggleDarkMode()">
                 <mat-icon *ngIf="isDarkModeInit">dark_mode</mat-icon>
                 <mat-icon *ngIf="!isDarkModeInit">brightness_7</mat-icon>
             </mat-slide-toggle>
@@ -46,12 +53,6 @@
                 <p *ngIf="isDarkModeInit">Dark Mode</p>
                 <p *ngIf="!isDarkModeInit">Light Mode</p>
             </div>
-        </div>
-
-        <div class="Side_Nav_Closer">
-            <div class="Side_Nav_Border">-</div>
-            <a class="Side_Nav_Contact" routerLink="/Contact">CONTACT US</a>
-            <a class="Side_Nav_Dashboard" routerLink="/">DASHBOARD</a>
         </div>
     </div>
 </nav>

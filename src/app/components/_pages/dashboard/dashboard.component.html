@@ -1,7 +1,7 @@
 <div class="Dashboard">
 
     <div class="Theme-Slider">
-        <mat-slide-toggle [checked]="isDarkModeInit" labelPosition="before" (change)="toggleDarkMode()">
+        <mat-slide-toggle color="primary" [checked]="isDarkModeInit" labelPosition="before" (change)="toggleDarkMode()">
             <mat-icon *ngIf="isDarkModeInit">dark_mode</mat-icon>
             <mat-icon *ngIf="!isDarkModeInit">brightness_7</mat-icon>
         </mat-slide-toggle>

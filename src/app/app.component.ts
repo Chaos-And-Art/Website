@@ -1,5 +1,5 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
   constructor(public router: Router) {
     this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
+      if (event instanceof NavigationEnd || event instanceof NavigationStart) {
         window.scrollTo(0, 0);
       }
     });

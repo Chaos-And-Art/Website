@@ -9,7 +9,11 @@ import { Page, Selected, SelectedTab } from 'src/app/models/selectedTab';
 
 export class ArtComponent implements OnInit {
 
-  secondData: SelectedTab = { id: 1, page: Page.Art, selected: Selected.Photos }
+  recentData: SelectedTab = { id: 0, page: Page.Art, selected: Selected.RecentlyAdded }
+  photoData: SelectedTab = { id: 1, page: Page.Art, selected: Selected.Photos }
+  videoData: SelectedTab = { id: 2, page: Page.Art, selected: Selected.Videos }
+  drawingData: SelectedTab = { id: 3, page: Page.Art, selected: Selected.Drawings }
+  paintingData: SelectedTab = { id: 4, page: Page.Art, selected: Selected.Paintings }
 
   constructor() { }
 

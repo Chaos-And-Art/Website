@@ -20,13 +20,13 @@ export class ArtCarouselComponent implements OnInit {
 
   constructor() {
     this.artImages.push(
-      { id: 1, imgSrc: "https://images.pexels.com/photos/3299386/pexels-photo-3299386.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 2, imgSrc: "https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 3, imgSrc: "https://images.pexels.com/photos/3941855/pexels-photo-3941855.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 4, imgSrc: "https://images.pexels.com/photos/2627945/pexels-photo-2627945.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 5, imgSrc: "https://images.pexels.com/photos/4311512/pexels-photo-4311512.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 6, imgSrc: "https://images.pexels.com/photos/7799298/pexels-photo-7799298.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 7, imgSrc: "https://images.pexels.com/photos/9723176/pexels-photo-9723176.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
+      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_city.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_city.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_clouds.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_clouds.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_ferns.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_ferns.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_forest.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_forest.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_hut.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_hut.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_ocean.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_ocean.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_bridge.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_bridge.jpg" },
     )
   }
 
