@@ -1,11 +1,19 @@
 <h2 class="title">Art</h2>
 
 <mat-tab-group mat-stretch-tabs scrollToCenter dynamicHeight animationDuration="5ms">
-    <mat-tab label="Recently Added"></mat-tab>
-    <mat-tab label="Photos">
-        <app-custom-image [data]="secondData"></app-custom-image>
+    <mat-tab label="Recently Added">
+        <app-custom-image [data]="recentData"></app-custom-image>
     </mat-tab>
-    <mat-tab label="Videos"> Videos</mat-tab>
-    <mat-tab label="Drawings"> Drawings </mat-tab>
-    <mat-tab label="Paintings"> Paintings</mat-tab>
+    <mat-tab label="Photos">
+        <app-custom-image [data]="photoData"></app-custom-image>
+    </mat-tab>
+    <mat-tab label="Videos">
+        <app-custom-image [data]="videoData"></app-custom-image>
+    </mat-tab>
+    <mat-tab label="Drawings">
+        <app-custom-image [data]="drawingData"></app-custom-image>
+    </mat-tab>
+    <mat-tab label="Paintings">
+        <app-custom-image [data]="paintingData"></app-custom-image>
+    </mat-tab>
 </mat-tab-group>

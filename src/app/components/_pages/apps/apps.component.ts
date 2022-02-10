@@ -8,7 +8,10 @@ import { Page, Selected, SelectedTab } from 'src/app/models/selectedTab';
 })
 export class AppsComponent implements OnInit {
 
-  thirdData: SelectedTab = { id: 1, page: Page.Apps, selected: Selected.Apps }
+  allData: SelectedTab = { id: 0, page: Page.Apps, selected: Selected.ShowAll }
+  topData: SelectedTab = { id: 1, page: Page.Apps, selected: Selected.TopRated }
+  appData: SelectedTab = { id: 2, page: Page.Apps, selected: Selected.Apps }
+  gameData: SelectedTab = { id: 3, page: Page.Apps, selected: Selected.Games }
 
   constructor() { }
 

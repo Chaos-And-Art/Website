@@ -20,13 +20,13 @@ export class AppsCarouselComponent implements OnInit {
 
   constructor() {
     this.appImages.push(
-      { id: 1, imgSrc: "https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 2, imgSrc: "https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 3, imgSrc: "https://images.pexels.com/photos/4220967/pexels-photo-4220967.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 4, imgSrc: "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 5, imgSrc: "https://images.pexels.com/photos/2400594/pexels-photo-2400594.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 6, imgSrc: "https://images.pexels.com/photos/2627945/pexels-photo-2627945.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
-      { id: 7, imgSrc: "https://images.pexels.com/photos/1179229/pexels-photo-1179229.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "", alt: "" },
+      { id: 1, imgSrc: "https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
+      { id: 2, imgSrc: "https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
+      { id: 3, imgSrc: "https://images.pexels.com/photos/4220967/pexels-photo-4220967.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
+      { id: 4, imgSrc: "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
+      { id: 5, imgSrc: "https://images.pexels.com/photos/2400594/pexels-photo-2400594.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
+      { id: 6, imgSrc: "https://images.pexels.com/photos/2627945/pexels-photo-2627945.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
+      { id: 7, imgSrc: "https://images.pexels.com/photos/1179229/pexels-photo-1179229.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
     )
   }
 

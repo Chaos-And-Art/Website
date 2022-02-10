@@ -10,12 +10,10 @@
     </div>
 
 
-    <ngx-tiny-slider [config]="appsTinySliderConfig" #sliderLazy class="art-slider">
+    <ngx-tiny-slider [config]="appsTinySliderConfig" #sliderLazy class="apps-slider">
         <ng-container class="items">
             <div class="item" *ngFor="let image of appImages" [class.hidden]="sliderHidden">
-                <a target="_blank" href="#">
-                    <img [src]="image.imgSrc" (load)="onImgLoadSuccess()" />
-                </a>
+                <img routerLink="/Apps" [src]="image.imgSrc" (load)="onImgLoadSuccess()" />
             </div>
         </ng-container>
     </ngx-tiny-slider>

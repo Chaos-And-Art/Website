@@ -1,14 +1,11 @@
 <div class="grid">
-    <div class="Art_Card flow" *ngFor="let image of images">
+    <div class="Art_Card flow" *ngFor="let image of imageData">
         <img class="Details_Icon" src="/assets/icons/question.png">
         <img class="Card_Image" [defaultImage]="image.imgLazy" [lazyLoad]="image.imgSrc" [offset]="250">
         <div class="Card_Details">
             <h2>Art Details</h2>
             <p> This is a temporary placeholder. Future details for art will be placed here. I
-                appreciate you
-                taking
-                the time to explore my website.
-                :)
+                appreciate you taking the time to explore my website. :)
             </p>
         </div>
         <div class="Card_Options">

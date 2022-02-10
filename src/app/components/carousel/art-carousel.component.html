@@ -13,9 +13,7 @@
     <ngx-tiny-slider [config]="artTinySliderConfig" #sliderLazy class="art-slider">
         <ng-container class="items">
             <div class="item" *ngFor="let image of artImages" [class.hidden]="sliderHidden">
-                <a target="_blank" href="#">
-                    <img [src]="image.imgSrc" (load)="onImgLoadSuccess()" />
-                </a>
+                <img routerLink="/Art" [src]="image.imgSrc" (load)="onImgLoadSuccess()" />
             </div>
         </ng-container>
     </ngx-tiny-slider>

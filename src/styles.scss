@@ -1,30 +1,12 @@
 @import "~@angular/material/theming";
 @include mat-core();
 
-$mat-primary-scheme: (
-  100: #c5cae9,
-  500: #61699a,
-  700: #303f9f,
-  contrast: (
-    100: rgba(0, 0, 0, 0.87),
-    500: #ffffff,
-    700: #ffffff,
-  ),
-);
+$primary-theme: mat-palette($mat-gray);
+$accent-theme: mat-palette($mat-blue-gray);
+$warn-theme: mat-palette($mat-deep-orange);
 
-$mat-accent-scheme: (
-  100: #ff80ab,
-  500: #ff4081,
-  700: #f50057,
-  contrast: (
-    100: rgba(0, 0, 0, 0.87),
-    500: rgba(0, 0, 0, 0.87),
-    700: #ffffff,
-  ),
-);
-
-$mat-primary-palette: mat-palette($mat-primary-scheme);
-$mat-accent-palette: mat-palette($mat-accent-scheme);
+$mat-primary-palette: mat-palette($primary-theme);
+$mat-accent-palette: mat-palette($accent-theme);
 
 $app-light-theme: mat-light-theme($mat-primary-palette, $mat-accent-palette);
 $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
@@ -76,7 +58,10 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
     .Active-Page {
       color: black;
     }
-    .Side_Nav_Border {
+    .Side_Nav_Border_1 {
+      background-color: #333;
+    }
+    .Side_Nav_Border_2 {
       background-color: #333;
     }
     .Side_Nav_Dashboard {
@@ -137,6 +122,10 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
       border-color: #222 !important;
       color: #ddd;
     }
+
+    .Dashboard-Icons img {
+      filter: invert(75%);
+    }
   }
 
   .Header {
@@ -165,7 +154,10 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
     .Active-Page {
       color: white;
     }
-    .Side_Nav_Border {
+    .Side_Nav_Border_1 {
+      background-color: #aaa;
+    }
+    .Side_Nav_Border_2 {
       background-color: #aaa;
     }
     .Side_Nav_Dashboard {
@@ -202,7 +194,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Importing Bootstrap SCSS file. */
