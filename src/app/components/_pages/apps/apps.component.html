@@ -1,16 +1,24 @@
 <h2 class="title">Apps</h2>
 
-<mat-tab-group mat-stretch-tabs scrollToCenter dynamicHeight animationDuration="5ms">
+<mat-tab-group mat-stretch-tabs scrollToCenter dynamicHeight animationDuration="5ms" preserveContent="true">
     <mat-tab label="Show All">
-        <app-custom-card [data]="allData"></app-custom-card>
+        <ng-template matTabContent>
+            <app-custom-card [data]="allData"></app-custom-card>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Top Rated">
-        <app-custom-card [data]="topData"></app-custom-card>
+        <ng-template matTabContent>
+            <app-custom-card [data]="topData"></app-custom-card>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Apps">
-        <app-custom-card [data]="appData"></app-custom-card>
+        <ng-template matTabContent>
+            <app-custom-card [data]="appData"></app-custom-card>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Games">
-        <app-custom-card [data]="gameData"></app-custom-card>
+        <ng-template matTabContent>
+            <app-custom-card [data]="gameData"></app-custom-card>
+        </ng-template>
     </mat-tab>
 </mat-tab-group>

@@ -74,7 +74,7 @@ import { BlankComponent } from './components/_pages/blank/blank.component';
     MatIconModule,
     NgParticlesModule,
     NgxTinySliderModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
