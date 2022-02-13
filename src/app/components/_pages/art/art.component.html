@@ -1,19 +1,30 @@
 <h2 class="title">Art</h2>
 
-<mat-tab-group mat-stretch-tabs scrollToCenter dynamicHeight animationDuration="5ms">
+<mat-tab-group mat-stretch-tabs scrollToCenter dynamicHeight animationDuration="5ms" preserveContent="true">
     <mat-tab label="Recently Added">
-        <app-custom-image [data]="recentData"></app-custom-image>
+        <!-- Supposedly this is used to lazy load (ng-template)-->
+        <ng-template matTabContent> 
+            <app-custom-image [data]="recentData"></app-custom-image>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Photos">
-        <app-custom-image [data]="photoData"></app-custom-image>
+        <ng-template matTabContent>
+            <app-custom-image [data]="photoData"></app-custom-image>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Videos">
-        <app-custom-image [data]="videoData"></app-custom-image>
+        <ng-template matTabContent>
+            <app-custom-image [data]="videoData"></app-custom-image>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Drawings">
-        <app-custom-image [data]="drawingData"></app-custom-image>
+        <ng-template matTabContent>
+            <app-custom-image [data]="drawingData"></app-custom-image>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Paintings">
-        <app-custom-image [data]="paintingData"></app-custom-image>
+        <ng-template matTabContent>
+            <app-custom-image [data]="paintingData"></app-custom-image>
+        </ng-template>
     </mat-tab>
 </mat-tab-group>
