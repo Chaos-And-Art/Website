@@ -34,7 +34,6 @@ import { AppsCarouselComponent } from './components/carousel/apps-carousel.compo
 import { MatTabScrollToCenterDirective } from './utils/scrolling.directive';
 import { CustomImageComponent } from './components/custom-image/custom-image.component';
 import { BlankComponent } from './components/_pages/blank/blank.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -76,7 +75,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgParticlesModule,
     NgxTinySliderModule,
     LazyLoadImageModule,
-    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

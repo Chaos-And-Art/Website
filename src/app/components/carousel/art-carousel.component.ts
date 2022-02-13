@@ -93,12 +93,12 @@ export class ArtCarouselComponent implements OnInit {
       .pipe(filter((count: number) => count === this.artImages.length))
       .subscribe(next => {
         this.sliderLazy.domReady.next(1);
-        this.sliderHidden = false;
       });
   }
 
   onImgLoadSuccess() {
     const incLoadedCount = this.imageLoadingProcess.getValue() + 1;
     this.imageLoadingProcess.next(incLoadedCount);
+    this.sliderHidden = false;
   }
 }

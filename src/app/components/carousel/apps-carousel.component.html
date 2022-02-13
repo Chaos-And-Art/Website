@@ -10,9 +10,9 @@
     </div>
 
 
-    <ngx-tiny-slider [config]="appsTinySliderConfig" #sliderLazy class="apps-slider">
+    <ngx-tiny-slider [config]="appsTinySliderConfig" #sliderLazy class="apps-slider" [hidden]="sliderHidden">
         <ng-container class="items">
-            <div class="item" *ngFor="let image of appImages" [class.hidden]="sliderHidden">
+            <div class="item" *ngFor="let image of appImages">
                 <img routerLink="/Apps" [src]="image.imgSrc" (load)="onImgLoadSuccess()" />
             </div>
         </ng-container>
