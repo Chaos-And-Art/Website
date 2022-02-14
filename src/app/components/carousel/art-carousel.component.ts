@@ -93,6 +93,7 @@ export class ArtCarouselComponent implements OnInit {
       .pipe(filter((count: number) => count === this.artImages.length))
       .subscribe(next => {
         this.sliderLazy.domReady.next(1);
+        this.sliderHidden = false; //May get rid of this, since I don't need it twice
       });
   }
 
