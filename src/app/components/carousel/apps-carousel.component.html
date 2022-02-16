@@ -13,7 +13,7 @@
     <ngx-tiny-slider [config]="appsTinySliderConfig" #sliderLazy class="apps-slider" [hidden]="sliderHidden">
         <ng-container class="items">
             <div class="item" *ngFor="let image of appImages">
-                <img routerLink="/Apps" [src]="image.imgSrc" (load)="onImgLoadSuccess()" />
+                <img class="tns-lazy-img lazy-apps" routerLink="/Apps" [src]="image.imgLazy" (load)="onImgLoadSuccess()" />
             </div>
         </ng-container>
     </ngx-tiny-slider>

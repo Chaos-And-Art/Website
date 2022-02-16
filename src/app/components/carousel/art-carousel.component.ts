@@ -20,13 +20,13 @@ export class ArtCarouselComponent implements OnInit {
 
   constructor() {
     this.artImages.push(
-      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_city.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_city.jpg" },
-      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_clouds.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_clouds.jpg" },
-      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_ferns.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_ferns.jpg" },
-      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_forest.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_forest.jpg" },
-      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_hut.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_hut.jpg" },
-      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_ocean.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_ocean.jpg" },
-      { id: 0, imgSrc: "/assets/images-videos/original/large/landscape/large_bridge.jpg", imgLazy: "/assets/images-videos/original/small/landscape/small_bridge.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_city.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_city.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_clouds.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_clouds.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_ferns.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_ferns.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_forest.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_forest.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_hut.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_hut.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_ocean.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_ocean.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_bridge.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_bridge.jpg" },
     )
   }
 
@@ -104,7 +104,7 @@ export class ArtCarouselComponent implements OnInit {
     if (this.loadedImages >= 6) {
       this.sliderHidden = false;
 
-      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-load"));
+      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-art"));
       var correctImage: HTMLImageElement[] = [];
       lazyImages.forEach((image: HTMLImageElement) => {
         correctImage.push(image)

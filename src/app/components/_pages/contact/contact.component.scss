@@ -1,0 +1,155 @@
+.Box {
+    width: 98%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 10px 15px 5px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+    p {
+        width: 95%;
+        margin: auto;
+    }
+}
+
+.mat-stroked-button {
+    width: 45%;
+    margin: auto;
+    background: none;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border: solid 1px;
+    border-radius: 12px;
+    font-weight: 400;
+}
+
+.Contact-Intro {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+}
+
+.Contact-Form {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.Form-Input {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Form-Input img {
+    width: 20px;
+    height: 20px;
+    margin: 6px;
+    filter: invert(100%); //STYLE IN style.css
+}
+
+.Form-Input input {
+    padding: 0px 10px 2px 10px;
+    width: 100%;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    opacity: 0.4;
+    border-radius: 5px;
+    border-bottom: 2px solid black;
+    &:focus{
+        opacity: 1;
+    }
+}
+
+.Form-Input textarea {
+    margin-left: 31px;
+    padding: 10px;
+    width: 100%;
+    height: 150px;
+    font-size: 18px;
+    outline: none;
+    opacity: 0.4;
+    border-radius: 5px;
+    border: black;
+    &:focus{
+        opacity: 1;
+    }
+}
+
+
+/*#region-----------------------Responsive_Layout-------------------------*/
+
+@media screen and (min-width: 375px) {
+    .Contact-Intro {
+        width: 95%;
+    }
+    .Contact-Form {
+        width: 95%;
+    }
+    .Form-Input img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .Contact-Intro {
+        width: 95%;
+    }
+    .Contact-Form {
+        width: 95%;
+    }
+    .Form-Input img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .Contact-Intro {
+        width: 80%;
+    }
+    .Contact-Form {
+        width: 95%;
+    }
+    .Form-Input img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Contact-Intro {
+        width: 70%;
+    }
+    .Contact-Form {
+        width: 80%;
+    }
+    .Form-Input img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .Contact-Intro {
+        width: 60%;
+    }
+    .Contact-Form {
+        width: 60%;
+    }
+    .Form-Input img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+}
+
+/*#endregion*/
