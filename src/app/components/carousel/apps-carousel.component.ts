@@ -20,14 +20,22 @@ export class AppsCarouselComponent implements OnInit {
 
   constructor() {
     this.appImages.push(
-      { id: 1, imgSrc: "https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
-      { id: 2, imgSrc: "https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
-      { id: 3, imgSrc: "https://images.pexels.com/photos/4220967/pexels-photo-4220967.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
-      { id: 4, imgSrc: "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
-      { id: 5, imgSrc: "https://images.pexels.com/photos/2400594/pexels-photo-2400594.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
-      { id: 6, imgSrc: "https://images.pexels.com/photos/2627945/pexels-photo-2627945.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
-      { id: 7, imgSrc: "https://images.pexels.com/photos/1179229/pexels-photo-1179229.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
+      { id: 1, imgSrc: "/assets/images-videos/original/apps/2048_1.jpg", imgLazy: "/assets/_misc/default.png" },
+      { id: 2, imgSrc: "/assets/images-videos/original/apps/Balls1.jpg", imgLazy: "/assets/_misc/default.png" },
+      { id: 3, imgSrc: "/assets/images-videos/original/apps/Notes1.png", imgLazy: "/assets/_misc/default.png" },
+      { id: 4, imgSrc: "/assets/images-videos/original/apps/Spinner1.png", imgLazy: "/assets/_misc/default.png" },
+      { id: 5, imgSrc: "/assets/images-videos/original/apps/Weather1.png", imgLazy: "/assets/_misc/default.png" }
     )
+
+    // this.appImages.push(
+    //   { id: 1, imgSrc: "https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "/assets/_misc/default.png" },
+    //   { id: 2, imgSrc: "https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "/assets/_misc/default.png" },
+    //   { id: 3, imgSrc: "https://images.pexels.com/photos/4220967/pexels-photo-4220967.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "/assets/_misc/default.png" },
+    //   { id: 4, imgSrc: "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "/assets/_misc/default.png" },
+    //   { id: 5, imgSrc: "https://images.pexels.com/photos/2400594/pexels-photo-2400594.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "/assets/_misc/default.png" },
+    //   { id: 6, imgSrc: "https://images.pexels.com/photos/2627945/pexels-photo-2627945.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "/assets/_misc/default.png" },
+    //   { id: 7, imgSrc: "https://images.pexels.com/photos/1179229/pexels-photo-1179229.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "/assets/_misc/default.png" },
+    // )
   }
 
 
@@ -50,7 +58,7 @@ export class AppsCarouselComponent implements OnInit {
       responsive: {
         320: {
           items: 1.15,
-          gutter: 5,
+          gutter: 10,
           center: true,
         },
         375: {
@@ -96,10 +104,25 @@ export class AppsCarouselComponent implements OnInit {
       });
   }
 
+  loadedImages = 0;
   onImgLoadSuccess() {
+    this.loadedImages++;
     const incLoadedCount = this.imageLoadingProcess.getValue() + 1;
     this.imageLoadingProcess.next(incLoadedCount);
-    this.sliderHidden = false;
+    if (this.loadedImages >= 4) {
+      this.sliderHidden = false;
+
+      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-apps"));
+      var correctImage: HTMLImageElement[] = [];
+      lazyImages.forEach((image: HTMLImageElement) => {
+        correctImage.push(image)
+      });
+
+      for (let i = 0; i < correctImage.length; i++) {
+        correctImage[i].dataset['src'] = this.appImages[i].imgSrc
+      }
+      this.loadedImages = 0
+    }
   }
 
 }

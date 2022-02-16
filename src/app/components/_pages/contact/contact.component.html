@@ -1,1 +1,62 @@
-<p>contact works!</p>
+<div class="Contact-Intro" style="margin-top: 50px; padding-top: 30px;">
+    <h2>Contact</h2>
+    <br>
+    <p style="color: rgb(255, 100, 100); font-weight: 600;">Currently we are unable to assist with new Business
+        Inquiries. If you
+        have any
+        questions, comments, or concerns don't hesitate to contact us. We will get back to you at
+        our earliest convenience. Thank you for your time and patience!</p>
+    <br>
+    <br>
+    <h3 style="font-size: 25px; color: #006969;">Prospective Clients</h3>
+    <p>Do you have an App or Game idea but unsure where to start? Maybe you need a Website to showcase
+        your passion, or drive traffic for your business. How about photos and drone footage, or drawings and
+        paintings? Chaos & Art is here to help with all your App, Game, and Web development; as well as your
+        Photography, Videography, Drawing, and Painting needs. Click the respective link below for more details
+        and
+        information.</p>
+    <br>
+    <button mat-stroked-button routerLink="/Business-Information">Business Information</button>
+</div>
+
+<div class="Box">
+    <div class=Contact-Us>
+        <h3>Contact us at: </h3>
+        <p>support@chaosandart.studio</p>
+        <p style="font-weight: 600; padding: 15px 0px 15px 0px;">OR</p>
+        <p>Fill out our contact form below!</p>
+        <br>
+    </div>
+</div>
+
+<!-- #endregion -->
+
+<!--#region Contact-Form-->
+<div class="Box">
+    <h2>Contact Form</h2>
+    <form class="Contact-Form">
+        <div class="Form-Input">
+            <img src="/assets/icons/user.png">
+            <input type="text" id="Name" name="Name" placeholder="Name" required>
+        </div>
+
+        <div class="Form-Input">
+            <img src="/assets/icons/at.png">
+            <input type="email" id="Email" name="Email" placeholder="Email" required>
+        </div>
+
+        <div class="Form-Input">
+            <img src="/assets/icons/clipboard.png">
+            <input type="subject" id="Subject" name="Subject" placeholder="Subject" required>
+        </div>
+
+        <div class="Form-Input">
+            <textarea id="Message" name="Message" maxlength="3000" placeholder="Message" required></textarea>
+        </div>
+
+        <div class="Form-Button">
+            <!-- Popup for successfully sent -->
+            <button mat-stroked-button type="submit" name="submit">Send</button>
+        </div>
+    </form>
+</div>
