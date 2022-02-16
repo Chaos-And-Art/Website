@@ -93,13 +93,27 @@ export class ArtCarouselComponent implements OnInit {
       .pipe(filter((count: number) => count === this.artImages.length))
       .subscribe(next => {
         this.sliderLazy.domReady.next(1);
-        this.sliderHidden = false; //May get rid of this, since I don't need it twice
       });
   }
 
+  loadedImages = 0;
   onImgLoadSuccess() {
+    this.loadedImages++;
     const incLoadedCount = this.imageLoadingProcess.getValue() + 1;
     this.imageLoadingProcess.next(incLoadedCount);
-    this.sliderHidden = false;
+    if (this.loadedImages >= 6) {
+      this.sliderHidden = false;
+
+      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-load"));
+      var correctImage: HTMLImageElement[] = [];
+      lazyImages.forEach((image: HTMLImageElement) => {
+        correctImage.push(image)
+      });
+
+      for (let i = 0; i < correctImage.length; i++) {
+        correctImage[i].dataset['src'] = this.artImages[i].imgSrc
+      }
+      this.loadedImages = 0
+    }
   }
 }
