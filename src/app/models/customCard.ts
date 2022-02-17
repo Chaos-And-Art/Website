@@ -3,6 +3,7 @@ export interface CustomCard {
     type: CardType;
     topRated: boolean;
     imgSrc: string;
+    imgLazy: string;
 }
 
 export enum CardType {
