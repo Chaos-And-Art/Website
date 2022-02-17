@@ -38,13 +38,6 @@ export class NavBarComponent implements OnInit {
         setTimeout(() => {
           this.router.navigate([reloadPath]);
         }, 0);
-
-        // if (this.screenWidth <= 732) {
-        //   setTimeout(() => {
-        //     let navContent = document.getElementById('Nav_Menu') as HTMLInputElement;
-        //     navContent.checked = true;
-        //   }, 0);
-        // }
       })
     } else {
       this.router.navigate([reloadPath]);

@@ -86,8 +86,44 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
   .Top-Theme-Slider-Background {
     background: rgb(255, 255, 255, 0);
     :hover {
-      background: rgb(255, 255, 255, 1);
-      cursor: pointer;
+      background: rgb(225, 225, 225, 1);
+    }
+  }
+
+  .Apps-Card {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+
+    .Card-Actions {
+      background: rgba(0, 0, 0, 0.9);
+
+      h4 {
+        color: white;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+      .Card-Image img {
+        box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+        filter: brightness(50%);
+      }
+    }
+  }
+
+  .Contact-Form .Form-Input {
+    input {
+      opacity: 0.4;
+      border: none;
+      border-bottom: 1px solid black;
+      &:focus {
+        opacity: 1;
+      }
+    }
+    textarea {
+      opacity: 0.4;
+      &:focus {
+        opacity: 1;
+      }
     }
   }
 }
@@ -183,7 +219,51 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
     background: rgb(0, 0, 0, 0);
     :hover {
       background: rgb(0, 0, 0, 1);
-      cursor: pointer;
+    }
+  }
+
+  .Apps-Card {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    .Card-Actions {
+      background: rgba(201, 201, 201, 0.9);
+
+      h4 {
+        color: black;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+      .Card-Image img {
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+        filter: brightness(50%);
+      }
+    }
+  }
+
+  .Contact-Form .Form-Input {
+    img {
+      filter: invert(100%);
+    }
+
+    input {
+      background-color: #222;
+      color: white;
+      opacity: 0.6;
+      border: none;
+      border-bottom: 1px solid white;
+      &:focus {
+        opacity: 1;
+      }
+    }
+    textarea {
+      background-color: #222;
+      color: white;
+      opacity: 0.6;
+      &:focus {
+        opacity: 1;
+      }
     }
   }
 }

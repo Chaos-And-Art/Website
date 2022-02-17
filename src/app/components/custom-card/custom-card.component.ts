@@ -19,13 +19,13 @@ export class CustomCardComponent implements OnInit {
 
   constructor(public router: Router) {
     this.cards.push(
-      { id: 1, type: CardType.App, topRated: false, imgSrc: "https://images.pexels.com/photos/3299386/pexels-photo-3299386.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" },
-      { id: 2, type: CardType.Game, topRated: true, imgSrc: "https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" },
-      { id: 3, type: CardType.Game, topRated: false, imgSrc: "https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" },
-      { id: 4, type: CardType.App, topRated: false, imgSrc: "https://images.pexels.com/photos/2627945/pexels-photo-2627945.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" },
-      { id: 5, type: CardType.Game, topRated: false, imgSrc: "https://images.pexels.com/photos/4311512/pexels-photo-4311512.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" },
-      { id: 6, type: CardType.App, topRated: true, imgSrc: "https://images.pexels.com/photos/7799298/pexels-photo-7799298.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" },
-      { id: 7, type: CardType.App, topRated: false, imgSrc: "https://images.pexels.com/photos/9723176/pexels-photo-9723176.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" },
+      { id: 1, type: CardType.Game, topRated: true, imgSrc: "/assets/images-videos/original/apps/2048_1.jpg", imgLazy: "/assets/_misc/default.png" },
+      { id: 2, type: CardType.Game, topRated: true, imgSrc: "/assets/images-videos/original/apps/Balls1.jpg", imgLazy: "/assets/_misc/default.png" },
+      { id: 3, type: CardType.App, topRated: false, imgSrc: "/assets/images-videos/original/apps/Notes1.png", imgLazy: "/assets/_misc/default.png" },
+      { id: 4, type: CardType.Game, topRated: true, imgSrc: "/assets/images-videos/original/apps/Spinner1.png", imgLazy: "/assets/_misc/default.png" },
+      { id: 5, type: CardType.App, topRated: false, imgSrc: "/assets/images-videos/original/apps/Weather1.png", imgLazy: "/assets/_misc/default.png" },
+      // { id: 6, type: CardType.App, topRated: true, imgSrc: "https://images.pexels.com/photos/7799298/pexels-photo-7799298.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
+      // { id: 7, type: CardType.App, topRated: false, imgSrc: "https://images.pexels.com/photos/9723176/pexels-photo-9723176.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", imgLazy: "" },
     )
   }
 

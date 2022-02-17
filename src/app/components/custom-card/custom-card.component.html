@@ -1,5 +1,29 @@
 <div class="Apps-Card-Container" *ngIf="router.url == '/Apps'">
-    <mat-card *ngFor="let card of cardData">
+    <div class="Apps-Card" *ngFor="let card of cardData">
+        <div class="Card-Image ">
+            <img alt="App-1" [defaultImage]="default" [lazyLoad]="card.imgSrc">
+        </div>
+        <div class="Card-Content">
+            <h4>Click to Play</h4>
+            <h2>App 1</h2>
+            <p> This is a temporary placeholder. This layout is not final. Available apps and games are
+                almost here! I appreciate you taking the time to explore my website. :)
+            </p>
+        </div>
+        <div class="Card-Actions">
+            <a href="https://play.google.com/">
+                <img style="background:transparent" src="/assets/_misc/Google.png" alt="Google Play">
+            </a>
+            <h4>OR</h4>
+            <!-- href="https://www.apple.com/ios/app-store/" -->
+            <a class="Apple_Popup">
+                <img style="background:transparent" src="/assets/_misc/Apple.png" alt="App Store">
+            </a>
+        </div>
+    </div>
+
+
+    <!-- <mat-card *ngFor="let card of cardData">
         <div>
             <img mat-card-image [defaultImage]="default" [lazyLoad]="card.imgSrc">
         </div>
@@ -14,7 +38,7 @@
             <button mat-button><img src="/assets/_misc/Google.png" alt="Google Play"></button>
             <button mat-button><img src="/assets/_misc/Apple.png" alt="App Store"></button>
         </mat-card-actions>
-    </mat-card>
+    </mat-card> -->
 </div>
 
 <div class="flex-grid" *ngIf="router.url == '/Chaos'">
