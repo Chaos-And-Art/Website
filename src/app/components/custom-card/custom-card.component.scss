@@ -7,22 +7,24 @@
 }
 
 .Apps-Card {
-    margin: 25px 25px 25px;
+    margin: 25px 0px 25px;
     width: 350px;
-    height: 610px;
+    height: 500px;
     border-radius: 10px;
-    transition: .5s;
+    transition: 0.5s;
     position: relative;
 }
 
 .Card-Image {
-    display: inline-block;
-    overflow: hidden;
+    width: 175px;
+    height: 340px;
+    margin-top: 10px;
     border-radius: 10px;
-    width: 200px;
-    height: 400px;
-    margin: 10px;
-    margin-left: 65px;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    // border: solid 1px red;
 
     img {
         background: linear-gradient(0deg, rgba(200, 200, 200, 1) 0%, rgba(100, 100, 100, 1) 100%);
@@ -41,24 +43,24 @@
 }
 
 .Card-Actions {
-    position: absolute;
-    width: 90%;
-    bottom: 183px;
+    width: 85%;
+    bottom: 132px;
     border-radius: 10px;
     transition: 0.5s;
     opacity: 0;
     padding: 15px;
-    margin-left: 16px;
+    position: absolute;
+    left: 8%;
 
     img {
         display: block;
-        width: 200px;
-        height: 75px;
+        width: 150px;
+        height: 55px;
         margin: auto;
         margin-bottom: 10px;
     }
 
-    h4{
+    h4 {
         text-align: center;
     }
 }
@@ -69,90 +71,102 @@
     padding-left: 20px;
     text-align: left;
     h2 {
-        font-size: 23px;
+        font-size: 20px;
     }
     h4 {
         text-align: center;
-    }
-    p {
         font-size: 15px;
     }
+    p {
+        font-size: 12px;
+    }
 }
-
-// ::ng-deep .mat-card {
-//     width: $card-width;
-//     border-radius: 15px !important;
-//     margin: auto;
-//     margin-bottom: 20px;
-//     overflow: hidden;
-// }
-
-// .mat-card-image {
-//     transition: 0.8s;
-//     width: $card-width + 0.3;
-//     height: 300px;
-// }
-
-// .mat-card-content {
-//     width: 100%;
-//     text-align: left;
-//     h2 {
-//         color: #006969;
-//         font-size: 23px;
-//     }
-//     h4 {
-//         text-align: center;
-//         font-size: 13px;
-//         user-select: none;
-//     }
-//     p {
-//         font-size: 15px;
-//     }
-// }
-
-// .mat-card-actions {
-//     color: #ccc;
-//     position: absolute;
-//     width: 94%;
-//     bottom: 200px;
-//     display: flex;
-//     justify-content: space-evenly;
-//     transition: 0.8s;
-//     opacity: 0;
-//     button img {
-//         background-color: transparent;
-//         width: calc($card-width / 2.5);
-//         height: calc($card-width / 7);
-//     }
-// }
-
-// .mat-card:hover {
-//     .mat-card-image {
-//         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
-//         transform: scale(1.03);
-//         filter: brightness(50%);
-//     }
-//     .mat-card-actions {
-//         opacity: 1;
-//         transform: translate(0, -25px);
-//     }
-// }
 
 /*#region-----------------------Responsive_Layout-------------------------*/
 
 @media screen and (min-width: 320px) {
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) {
+    .Apps-Card {
+        margin: 25px 5px 25px;
+        width: 350px;
+        height: 600px;
+    }
+    
+    .Card-Image {
+        width: 225px;
+        height: 420px;
+        margin-top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .Card-Actions {
+        width: 75%;
+        bottom: 153px;
+        border-radius: 10px;
+        left: 12.5%;
+    }
+    
+    .Card-Content {
+        h2 {
+            font-size: 22px;
+        }
+        h4 {
+            text-align: center;
+            font-size: 16px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
 }
 
 @media screen and (min-width: 425px) {
 }
 
 @media screen and (min-width: 768px) {
+    .Apps-Card {
+        margin: 25px 15px 25px;
+       
+    }
 }
 
 @media screen and (min-width: 1024px) {
+    .Apps-Card {
+        margin: 25px 35px 25px;
+        width: 350px;
+        height: 655px;
+    }
+    
+    .Card-Image {
+        width: 240px;
+        height: 460px;
+        margin-top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .Card-Actions {
+        width: 85%;
+        bottom: 168px;
+        border-radius: 10px;
+        left: 8%;
+    }
+    
+    .Card-Content {
+        h2 {
+            font-size: 24px;
+        }
+        h4 {
+            text-align: center;
+            font-size: 18px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
 }
 
 @media screen and (min-width: 1440px) {

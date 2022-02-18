@@ -10,6 +10,9 @@ export class DashboardComponent implements OnInit {
   isDarkMode?: boolean;
   isDarkModeInit?: boolean;
 
+  defaultImage = "/assets/_misc/Silhouette_icon.png";
+  image = "/assets/_misc/Silhouette_small.png";
+
   constructor(private themeService: ThemingService) {
     this.themeService.initTheme();
   }

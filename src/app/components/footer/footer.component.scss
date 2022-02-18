@@ -9,27 +9,17 @@
     background: #222;
 }
 
-.Contact button {
-    width: 40%;
+.Contact .mat-stroked-button {
+    width: 45%;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: block;
-    background: transparent;
-    color: white;
-    border-radius: 12px;
+    background: none;
+    margin-top: 15px;
+    margin-bottom: 10px;
     border: solid 1px;
-    padding: 5px 15px 5px;
-    font-size: 14px;
+    border-radius: 12px;
     font-weight: 400;
-}
-
-.Contact button:hover,
-.Contact button:focus,
-.Contact button:active {
-    background: #ccc !important;
-    border-color: #ccc !important;
-    color: black;
+    border: solid #444 1px;
+    color: white;
 }
 
 .Closer {
@@ -53,31 +43,31 @@
 }
 
 @media screen and (min-width: 425px) {
-    .Contact button {
+    .Contact .mat-stroked-button {
         width: 35%;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .Contact button {
+    .Contact .mat-stroked-button {
         width: 20%;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .Contact button {
+    .Contact .mat-stroked-button {
         width: 18%;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .Contact button {
+    .Contact .mat-stroked-button {
         width: 12%;
     }
 }
 
 @media screen and (min-width: 2560px) {
-    .Contact button {
+    .Contact .mat-stroked-button {
         width: 8%;
     }
 }

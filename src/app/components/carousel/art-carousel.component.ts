@@ -20,13 +20,13 @@ export class ArtCarouselComponent implements OnInit {
 
   constructor() {
     this.artImages.push(
-      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_city.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_city.jpg" },
-      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_clouds.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_clouds.jpg" },
-      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_ferns.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_ferns.jpg" },
-      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_forest.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_forest.jpg" },
-      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_hut.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_hut.jpg" },
-      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_ocean.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_ocean.jpg" },
-      { id: 0, imgSrc: "/assets/images-videos/original/photos/landscape/original_bridge.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_bridge.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/compressed/photos/landscape/city.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_city.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/compressed/photos/landscape/clouds.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_clouds.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/compressed/photos/landscape/ferns.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_ferns.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/compressed/photos/landscape/forest.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_forest.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/compressed/photos/landscape/hut.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_hut.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/compressed/photos/landscape/ocean.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_ocean.jpg" },
+      { id: 0, imgSrc: "/assets/images-videos/compressed/photos/landscape/bridge.jpg", imgLazy: "/assets/images-videos/tiny/photos/landscape/tiny_bridge.jpg" },
     )
   }
 
@@ -97,11 +97,12 @@ export class ArtCarouselComponent implements OnInit {
   }
 
   loadedImages = 0;
+  secondPhase = false;
   onImgLoadSuccess() {
     this.loadedImages++;
     const incLoadedCount = this.imageLoadingProcess.getValue() + 1;
     this.imageLoadingProcess.next(incLoadedCount);
-    if (this.loadedImages >= 6) {
+    if (this.loadedImages >= 6 && this.secondPhase == false) {
       this.sliderHidden = false;
 
       var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-art"));
@@ -114,6 +115,7 @@ export class ArtCarouselComponent implements OnInit {
         correctImage[i].dataset['src'] = this.artImages[i].imgSrc
       }
       this.loadedImages = 0
+      this.secondPhase = true;
     }
   }
 }
