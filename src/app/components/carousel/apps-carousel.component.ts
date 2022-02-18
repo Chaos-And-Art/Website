@@ -20,11 +20,11 @@ export class AppsCarouselComponent implements OnInit {
 
   constructor() {
     this.appImages.push(
-      { id: 1, imgSrc: "/assets/images-videos/original/apps/2048_1.jpg", imgLazy: "/assets/_misc/default.png" },
-      { id: 2, imgSrc: "/assets/images-videos/original/apps/Balls1.jpg", imgLazy: "/assets/_misc/default.png" },
-      { id: 3, imgSrc: "/assets/images-videos/original/apps/Notes1.png", imgLazy: "/assets/_misc/default.png" },
-      { id: 4, imgSrc: "/assets/images-videos/original/apps/Spinner1.png", imgLazy: "/assets/_misc/default.png" },
-      { id: 5, imgSrc: "/assets/images-videos/original/apps/Weather1.png", imgLazy: "/assets/_misc/default.png" }
+      { id: 1, imgSrc: "/assets/images-videos/compressed/apps/2048.jpg", imgLazy: "/assets/images-videos/tiny/apps/tiny_2048.jpg" },
+      { id: 2, imgSrc: "/assets/images-videos/compressed/apps/Balls.jpg", imgLazy: "/assets/images-videos/tiny/apps/tiny_balls.jpg" },
+      { id: 3, imgSrc: "/assets/images-videos/compressed/apps/Notes.jpg", imgLazy: "/assets/images-videos/tiny/apps/tiny_notes.jpg" },
+      { id: 4, imgSrc: "/assets/images-videos/compressed/apps/Spinner.jpg", imgLazy: "/assets/images-videos/tiny/apps/tiny_spinner.jpg" },
+      { id: 5, imgSrc: "/assets/images-videos/compressed/apps/Weather.jpg", imgLazy: "/assets/images-videos/tiny/apps/tiny_weather.jpg" }
     )
 
     // this.appImages.push(
@@ -105,11 +105,12 @@ export class AppsCarouselComponent implements OnInit {
   }
 
   loadedImages = 0;
+  secondPhase = false;
   onImgLoadSuccess() {
     this.loadedImages++;
     const incLoadedCount = this.imageLoadingProcess.getValue() + 1;
     this.imageLoadingProcess.next(incLoadedCount);
-    if (this.loadedImages >= 4) {
+    if (this.loadedImages >= 4 && this.secondPhase == false) {
       this.sliderHidden = false;
 
       var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-apps"));
@@ -122,6 +123,7 @@ export class AppsCarouselComponent implements OnInit {
         correctImage[i].dataset['src'] = this.appImages[i].imgSrc
       }
       this.loadedImages = 0
+      this.secondPhase = true;
     }
   }
 
