@@ -22,7 +22,7 @@ export class AppsCarouselComponent implements OnInit {
     this.appImages.push(
       { id: 1, imgSrc: "/assets/images-videos/compressed/apps/2048.jpg", imgLazy: "/assets/images-videos/tiny/apps/tiny_2048.jpg" },
       { id: 2, imgSrc: "/assets/images-videos/compressed/apps/Balls.jpg", imgLazy: "/assets/images-videos/tiny/apps/tiny_balls.jpg" },
-      { id: 3, imgSrc: "/assets/images-videos/compressed/apps/Notes.jpg", imgLazy: "/assets/images-videos/tiny/apps/tiny_notes.jpg" },
+      { id: 3, imgSrc: "/assets/images-videos/compressed/apps/Notes_1.jpg", imgLazy: "/assets/images-videos/tiny/apps/tiny_notes.jpg" },
       { id: 4, imgSrc: "/assets/images-videos/compressed/apps/Spinner.jpg", imgLazy: "/assets/images-videos/tiny/apps/tiny_spinner.jpg" },
       { id: 5, imgSrc: "/assets/images-videos/compressed/apps/Weather.jpg", imgLazy: "/assets/images-videos/tiny/apps/tiny_weather.jpg" }
     )

@@ -1,0 +1,83 @@
+.Chaos-Header{
+    padding-top:65px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.Chaos-Box {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+    .mat-stroked-button {
+        width: 35%;
+        margin: auto;
+        margin: 15px;
+        border: solid 1px #555;
+        border-radius: 12px;
+        font-weight: 400;
+    }
+}
+
+/*#region-----------------------Responsive_Layout-------------------------*/
+
+@media screen and (min-width: 320px) {
+}
+
+@media screen and (min-width: 375px) {
+    .Chaos-Box {
+        width: 95%;
+        .mat-stroked-button {
+            width: 35%;
+            margin: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 425px) {
+}
+
+@media screen and (min-width: 768px) {
+    .Chaos-Box {
+        width: 75%;
+        .mat-stroked-button {
+            width: 25%;
+            margin: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Chaos-Box {
+        width: 65%;
+        .mat-stroked-button {
+            width: 25%;
+            margin: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .Chaos-Box {
+        width: 70%;
+        .mat-stroked-button {
+            width: 20%;
+            margin: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .Chaos-Box {
+        width: 40%;
+        .mat-stroked-button {
+            width: 20%;
+            margin: 15px;
+        }
+    }
+}
+
+/*#endregion*/
