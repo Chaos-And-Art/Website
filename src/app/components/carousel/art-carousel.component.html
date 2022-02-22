@@ -1,22 +1,22 @@
 <div class="carousel">
     <h2 class="carousel-title">ART</h2>
-    <div class="controls" id="art-controls" tabindex="0">
+    <!-- <div class="controls" id="art-controls" tabindex="0">
         <div class="prev" data-controls="prev" tabindex="-1">
             <img src="/assets/icons/arrow_left.png">
         </div>
         <div class="next" data-controls="next" tabindex="-1">
             <img src="/assets/icons/arrow_right.png">
         </div>
-    </div>
+    </div> -->
 
 
-    <ngx-tiny-slider [config]="artTinySliderConfig" #sliderLazy class="art-slider" [hidden]="sliderHidden">
+    <!-- <ngx-tiny-slider [config]="artTinySliderConfig" #sliderLazy class="art-slider" [hidden]="sliderHidden">
         <ng-container class="items">
             <div class="item" *ngFor="let image of artImages">
                 <img class="tns-lazy-img lazy-art" routerLink="/Art" [src]="image.imgLazy"
                     (load)="onImgLoadSuccess()" />
             </div>
         </ng-container>
-    </ngx-tiny-slider>
+    </ngx-tiny-slider> -->
     <button mat-stroked-button routerLink="/Art">View More Art</button>
 </div>

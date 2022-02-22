@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgxTinySliderInstanceInterface, NgxTinySliderSettingsInterface } from 'ngx-tiny-slider';
+// import { NgxTinySliderInstanceInterface, NgxTinySliderSettingsInterface } from 'ngx-tiny-slider';
 import { BehaviorSubject, filter } from 'rxjs';
 import { CarouselImage } from 'src/app/models/carouselImage';
 
@@ -11,12 +11,12 @@ import { CarouselImage } from 'src/app/models/carouselImage';
 export class ArtCarouselComponent implements OnInit {
   sliderHidden = true;
   artImages = new Array<CarouselImage>();
-  artTinySliderConfig!: NgxTinySliderSettingsInterface;
+  // artTinySliderConfig!: NgxTinySliderSettingsInterface;
 
   imageLoadingProcess: BehaviorSubject<number> = new BehaviorSubject(0);
 
-  @ViewChild("sliderLazy", { static: false })
-  sliderLazy!: NgxTinySliderInstanceInterface;
+  // @ViewChild("sliderLazy", { static: false })
+  // sliderLazy!: NgxTinySliderInstanceInterface;
 
   constructor() {
     this.artImages.push(
@@ -32,59 +32,59 @@ export class ArtCarouselComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.artTinySliderConfig = {
-      controlsContainer: "#art-controls",
-      waitForDom: true,
-      autoWidth: true,
-      gutter: 10,
-      loop: true,
-      autoplay: true,
-      autoplayTimeout: 6000,
-      autoplayButtonOutput: false,
-      lazyload: true,
-      mouseDrag: true,
-      controls: true,
-      nav: false,
-      slideBy: 1,
-      speed: 400,
-      responsive: {
-        320: {
-          items: 1.15,
-          gutter: 5,
-          center: true,
-        },
-        375: {
-          items: 1.15,
-          gutter: 8,
-          center: true,
-        },
-        425: {
-          items: 1.2,
-          gutter: 10,
-          center: true,
-        },
-        768: {
-          items: 2,
-          gutter: 10,
-          center: true,
-        },
-        1024: {
-          items: 3,
-          gutter: 10,
-          center: true,
-        },
-        1440: {
-          items: 3,
-          gutter: 10,
-          center: true,
-        },
-        2560: {
-          items: 5,
-          gutter: 10,
-          center: true,
-        },
-      }
-    };
+    // this.artTinySliderConfig = {
+    //   controlsContainer: "#art-controls",
+    //   waitForDom: true,
+    //   autoWidth: true,
+    //   gutter: 10,
+    //   loop: true,
+    //   autoplay: true,
+    //   autoplayTimeout: 6000,
+    //   autoplayButtonOutput: false,
+    //   lazyload: true,
+    //   mouseDrag: true,
+    //   controls: true,
+    //   nav: false,
+    //   slideBy: 1,
+    //   speed: 400,
+    //   responsive: {
+    //     320: {
+    //       items: 1.15,
+    //       gutter: 5,
+    //       center: true,
+    //     },
+    //     375: {
+    //       items: 1.15,
+    //       gutter: 8,
+    //       center: true,
+    //     },
+    //     425: {
+    //       items: 1.2,
+    //       gutter: 10,
+    //       center: true,
+    //     },
+    //     768: {
+    //       items: 2,
+    //       gutter: 10,
+    //       center: true,
+    //     },
+    //     1024: {
+    //       items: 3,
+    //       gutter: 10,
+    //       center: true,
+    //     },
+    //     1440: {
+    //       items: 3,
+    //       gutter: 10,
+    //       center: true,
+    //     },
+    //     2560: {
+    //       items: 5,
+    //       gutter: 10,
+    //       center: true,
+    //     },
+    //   }
+    // };
     this.trackImageLoading();
   }
 
@@ -92,7 +92,7 @@ export class ArtCarouselComponent implements OnInit {
     this.imageLoadingProcess
       .pipe(filter((count: number) => count === this.artImages.length))
       .subscribe(next => {
-        this.sliderLazy.domReady.next(1);
+        // this.sliderLazy.domReady.next(1);
       });
   }
 

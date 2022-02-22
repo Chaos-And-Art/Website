@@ -15,9 +15,9 @@
     top: 12px;
 }
 
-.apps-slider .item {
-    width: 200px;
-    height: 400px;
+.carousel .apps-swiper {
+    // width: 200px;
+    // height: 400px;
     img {
         max-width: 100%;
         max-height: 100%;
@@ -28,35 +28,6 @@
         }
     }
 }
-
-.controls {
-    height: 0;
-    position: relative;
-    width: 100%;
-    top: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1;
-    .next img {
-        width: 25px;
-        padding: 5px 0 5px 5px;
-        background: rgba(255, 255, 255, 0.6);
-        filter: invert(1);
-        border-radius: 8px 0 0 8px;
-    }
-    .prev img {
-        width: 25px;
-        padding: 5px 5px 5px 0;
-        background: rgba(255, 255, 255, 0.6);
-        filter: invert(1);
-        border-radius: 0 8px 8px 0;
-    }
-    :hover {
-        cursor: pointer;
-    }
-}
-
 .mat-stroked-button {
     width: 45%;
     margin: auto;
