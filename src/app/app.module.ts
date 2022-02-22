@@ -34,6 +34,8 @@ import { AppsCarouselComponent } from './components/carousel/apps-carousel.compo
 import { MatTabScrollToCenterDirective } from './utils/scrolling.directive';
 import { CustomImageComponent } from './components/custom-image/custom-image.component';
 import { BlankComponent } from './components/_pages/blank/blank.component';
+import { FireworksComponent } from './components/_pages/chaosProjects/fireworks/fireworks.component';
+import { X2048Component } from './components/_pages/chaosProjects/x2048/x2048.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { BlankComponent } from './components/_pages/blank/blank.component';
     MatTabScrollToCenterDirective,
     CustomImageComponent,
     AppsCarouselComponent,
-    BlankComponent
+    BlankComponent,
+    FireworksComponent,
+    X2048Component
   ],
   imports: [
     BrowserModule,
