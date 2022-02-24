@@ -1,7 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-// import { NgxTinySliderInstanceInterface, NgxTinySliderSettingsInterface } from 'ngx-tiny-slider';
-import { BehaviorSubject, filter } from 'rxjs';
 import { CarouselImage } from 'src/app/models/carouselImage';
+
+import SwiperCore, {
+  SwiperOptions, Navigation, Pagination, Scrollbar, A11y, Virtual, Zoom, Autoplay, Thumbs, Controller, Lazy,
+} from 'swiper';
+import { SwiperComponent } from 'swiper/angular';
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Virtual, Zoom, Autoplay, Thumbs, Controller, Lazy]);
 
 @Component({
   selector: 'app-art-carousel',
@@ -9,14 +13,67 @@ import { CarouselImage } from 'src/app/models/carouselImage';
   styleUrls: ['./art-carousel.component.scss']
 })
 export class ArtCarouselComponent implements OnInit {
-  sliderHidden = true;
   artImages = new Array<CarouselImage>();
-  // artTinySliderConfig!: NgxTinySliderSettingsInterface;
+  @ViewChild('swiperRef', { static: false }) swiperRef?: SwiperComponent;
+  navigation = false;
+  log(log: string) {
+    // console.log(string);
+  }
+  breakpoints = {
+    640: { slidesPerView: 2, spaceBetween: 20 },
+    768: { slidesPerView: 4, spaceBetween: 40 },
+    1024: { slidesPerView: 4, spaceBetween: 50 },
+  };
+  // indexNumber: any;
+  show?: boolean;
+  scrollbar: any = false;
+  slides = Array.from({ length: 5 }).map((el, index) => `Slide ${index + 1}`);
 
-  imageLoadingProcess: BehaviorSubject<number> = new BehaviorSubject(0);
+  swiperConfig: SwiperOptions = {
+    navigation: true,
+    loop: true,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    allowTouchMove: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    watchOverflow: true,
+    lazy: true,
 
-  // @ViewChild("sliderLazy", { static: false })
-  // sliderLazy!: NgxTinySliderInstanceInterface;
+    breakpoints: {
+      320: {
+        slidesPerView: 1.05,
+        spaceBetween: 5,
+      },
+      375: {
+        slidesPerView: 1.15,
+        spaceBetween: 18,
+      },
+      425: {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      2560: {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+    }
+  };
+
 
   constructor() {
     this.artImages.push(
@@ -31,91 +88,59 @@ export class ArtCarouselComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
-    // this.artTinySliderConfig = {
-    //   controlsContainer: "#art-controls",
-    //   waitForDom: true,
-    //   autoWidth: true,
-    //   gutter: 10,
-    //   loop: true,
-    //   autoplay: true,
-    //   autoplayTimeout: 6000,
-    //   autoplayButtonOutput: false,
-    //   lazyload: true,
-    //   mouseDrag: true,
-    //   controls: true,
-    //   nav: false,
-    //   slideBy: 1,
-    //   speed: 400,
-    //   responsive: {
-    //     320: {
-    //       items: 1.15,
-    //       gutter: 5,
-    //       center: true,
-    //     },
-    //     375: {
-    //       items: 1.15,
-    //       gutter: 8,
-    //       center: true,
-    //     },
-    //     425: {
-    //       items: 1.2,
-    //       gutter: 10,
-    //       center: true,
-    //     },
-    //     768: {
-    //       items: 2,
-    //       gutter: 10,
-    //       center: true,
-    //     },
-    //     1024: {
-    //       items: 3,
-    //       gutter: 10,
-    //       center: true,
-    //     },
-    //     1440: {
-    //       items: 3,
-    //       gutter: 10,
-    //       center: true,
-    //     },
-    //     2560: {
-    //       items: 5,
-    //       gutter: 10,
-    //       center: true,
-    //     },
-    //   }
-    // };
-    this.trackImageLoading();
-  }
+  ngOnInit(): void { }
 
-  trackImageLoading() {
-    this.imageLoadingProcess
-      .pipe(filter((count: number) => count === this.artImages.length))
-      .subscribe(next => {
-        // this.sliderLazy.domReady.next(1);
-      });
-  }
-
-  loadedImages = 0;
-  secondPhase = false;
-  onImgLoadSuccess() {
-    this.loadedImages++;
-    const incLoadedCount = this.imageLoadingProcess.getValue() + 1;
-    this.imageLoadingProcess.next(incLoadedCount);
-    if (this.loadedImages >= 6 && this.secondPhase == false) {
-      this.sliderHidden = false;
-
-      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-art"));
-      var correctImage: HTMLImageElement[] = [];
-      lazyImages.forEach((image: HTMLImageElement) => {
-        correctImage.push(image)
-      });
-
-      for (let i = 0; i < correctImage.length; i++) {
-        correctImage[i].dataset['src'] = this.artImages[i].imgSrc
-      }
-      this.loadedImages = 0
-      this.secondPhase = true;
-    }
-  }
+  // this.artTinySliderConfig = {
+  //   controlsContainer: "#art-controls",
+  //   waitForDom: true,
+  //   autoWidth: true,
+  //   gutter: 10,
+  //   loop: true,
+  //   autoplay: true,
+  //   autoplayTimeout: 6000,
+  //   autoplayButtonOutput: false,
+  //   lazyload: true,
+  //   mouseDrag: true,
+  //   controls: true,
+  //   nav: false,
+  //   slideBy: 1,
+  //   speed: 400,
+  //   responsive: {
+  //     320: {
+  //       items: 1.15,
+  //       gutter: 5,
+  //       center: true,
+  //     },
+  //     375: {
+  //       items: 1.15,
+  //       gutter: 8,
+  //       center: true,
+  //     },
+  //     425: {
+  //       items: 1.2,
+  //       gutter: 10,
+  //       center: true,
+  //     },
+  //     768: {
+  //       items: 2,
+  //       gutter: 10,
+  //       center: true,
+  //     },
+  //     1024: {
+  //       items: 3,
+  //       gutter: 10,
+  //       center: true,
+  //     },
+  //     1440: {
+  //       items: 3,
+  //       gutter: 10,
+  //       center: true,
+  //     },
+  //     2560: {
+  //       items: 5,
+  //       gutter: 10,
+  //       center: true,
+  //     },
+  //   }
+  // };
 }

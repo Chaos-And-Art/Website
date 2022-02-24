@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ThemingService } from 'src/app/theming.service';
 import type { ISourceOptions } from "tsparticles";
+import { PopupsComponent } from '../../popups/popups.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,7 @@ export class HomeComponent implements OnInit {
   colorTheme: any;
   darkmode: boolean = false;
 
-  constructor(private themeService: ThemingService) {
+  constructor(private themeService: ThemingService, public dialog: MatDialog) {
     this.themeService.initTheme();
   }
 
@@ -23,6 +25,17 @@ export class HomeComponent implements OnInit {
 
   onExploreButton() {
     window.scrollTo({ left: 0, top: this.height / 1.1, behavior: 'smooth' })
+  }
+
+  openChaosDialog() {
+    this.dialog.open(PopupsComponent, {
+      data: {
+        type: 'chaos',
+      },
+      position: {
+        top: '200px',
+      },
+    });
   }
 
   options: ISourceOptions = {

@@ -17,3 +17,23 @@
         <button mat-button mat-dialog-close cdkFocusInitial>OK</button>
     </mat-dialog-actions>
 </div>
+
+<div *ngIf="data.type === 'googlePlay'">
+    <h2 mat-dialog-title>Google Play Coming Soon!</h2>
+    <mat-dialog-content>
+        <p>Our applications and games will be avaiable soon on Google play! Thank you for your patience!</p>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        <button mat-button mat-dialog-close cdkFocusInitial>OK</button>
+    </mat-dialog-actions>
+</div>
+
+<div *ngIf="data.type === 'appStore'">
+    <h2 mat-dialog-title>App Store Coming Soon!</h2>
+    <mat-dialog-content>
+        <p>Our applications and games will be avaiable soon on Apple App Store! Thank you for your patience!</p>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        <button mat-button mat-dialog-close cdkFocusInitial>OK</button>
+    </mat-dialog-actions>
+</div>

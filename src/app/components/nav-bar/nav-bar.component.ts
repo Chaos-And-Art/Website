@@ -70,6 +70,17 @@ export class NavBarComponent implements OnInit {
     this.wasInside = false;
   }
 
+  openChaosDialog() {
+    this.dialog.open(PopupsComponent, {
+      data: {
+        type: 'chaos',
+      },
+      position: {
+        top: '200px',
+      },
+    });
+  }
+
   openMusicDialog() {
     this.dialog.open(PopupsComponent, {
       data: {
