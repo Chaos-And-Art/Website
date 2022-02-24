@@ -1,10 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgxTinySliderInstanceInterface, NgxTinySliderSettingsInterface } from 'ngx-tiny-slider';
+import { BehaviorSubject, filter } from 'rxjs';
 import { CarouselImage } from 'src/app/models/carouselImage';
-
-import SwiperCore, {
-  SwiperOptions, Navigation, Pagination, Scrollbar, A11y, Virtual, Zoom, Autoplay, Thumbs, Controller,
-} from 'swiper';
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Virtual, Zoom, Autoplay, Thumbs, Controller]);
 
 @Component({
   selector: 'app-apps-carousel',
@@ -12,20 +9,14 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Virtual, Zoom, Autoplay
   styleUrls: ['./apps-carousel.component.scss']
 })
 export class AppsCarouselComponent implements OnInit {
+  sliderHidden = true;
   appImages = new Array<CarouselImage>();
+  appsTinySliderConfig!: NgxTinySliderSettingsInterface;
 
-  swiperConfig: SwiperOptions = {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    navigation: true,
-    loop: true,
-    autoHeight: true,
-    allowTouchMove: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-  };
+  imageLoadingProcess: BehaviorSubject<number> = new BehaviorSubject(0);
+
+  @ViewChild("sliderLazy", { static: false })
+  sliderLazy!: NgxTinySliderInstanceInterface;
 
   constructor() {
     this.appImages.push(
@@ -47,6 +38,91 @@ export class AppsCarouselComponent implements OnInit {
     // )
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.appsTinySliderConfig = {
+      controlsContainer: "#apps-controls",
+      waitForDom: true,
+      autoWidth: true,
+      gutter: 10,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 6000,
+      autoplayButtonOutput: false,
+      lazyload: true,
+      mouseDrag: true,
+      controls: true,
+      nav: false,
+      slideBy: 1,
+      speed: 400,
+      responsive: {
+        320: {
+          items: 1.15,
+          gutter: 10,
+          center: true,
+        },
+        375: {
+          items: 1.15,
+          gutter: 8,
+          center: true,
+        },
+        425: {
+          items: 1.2,
+          gutter: 10,
+          center: true,
+        },
+        768: {
+          items: 2,
+          gutter: 10,
+          center: true,
+        },
+        1024: {
+          items: 3,
+          gutter: 10,
+          center: true,
+        },
+        1440: {
+          items: 3,
+          gutter: 10,
+          center: true,
+        },
+        2560: {
+          items: 5,
+          gutter: 10,
+          center: true,
+        },
+      }
+    };
+    this.trackImageLoading();
+  }
 
+  trackImageLoading() {
+    this.imageLoadingProcess
+      .pipe(filter((count: number) => count === this.appImages.length))
+      .subscribe(next => {
+        this.sliderLazy.domReady.next(1);
+      });
+  }
+
+  loadedImages = 0;
+  secondPhase = false;
+  onImgLoadSuccess() {
+    this.loadedImages++;
+    const incLoadedCount = this.imageLoadingProcess.getValue() + 1;
+    this.imageLoadingProcess.next(incLoadedCount);
+    if (this.loadedImages >= 4 && this.secondPhase == false) {
+      this.sliderHidden = false;
+
+      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy-apps"));
+      var correctImage: HTMLImageElement[] = [];
+      lazyImages.forEach((image: HTMLImageElement) => {
+        correctImage.push(image)
+      });
+
+      for (let i = 0; i < correctImage.length; i++) {
+        correctImage[i].dataset['src'] = this.appImages[i].imgSrc
+      }
+      this.loadedImages = 0
+      this.secondPhase = true;
+    }
+  }
 }

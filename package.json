@@ -24,6 +24,8 @@
     "bootstrap": "^5.1.3",
     "ng-lazyload-image": "^9.1.1",
     "ng-particles": "^2.22.0",
+    "ngx-tiny-slider": "^1.0.2",
+    "ngx-tiny-slider-wrapper": "github:vdanyliv/ngx-tiny-slider",
     "rxjs": "~7.5.0",
     "smoothscroll-polyfill": "0.4.4",
     "swiper": "^8.0.6",

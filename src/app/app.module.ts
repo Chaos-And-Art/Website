@@ -9,7 +9,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { NgParticlesModule } from 'ng-particles';
 import { SwiperModule } from 'swiper/angular';
-// import { NgxTinySliderModule } from 'ngx-tiny-slider';
+import { NgxTinySliderModule } from 'ngx-tiny-slider';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { AppComponent } from './app.component';
@@ -79,7 +79,7 @@ import { X2048Component } from './components/_pages/chaosProjects/x2048/x2048.co
     MatIconModule,
     NgParticlesModule,
     SwiperModule,
-    // NgxTinySliderModule,
+    NgxTinySliderModule,
     LazyLoadImageModule,
   ],
   providers: [],
