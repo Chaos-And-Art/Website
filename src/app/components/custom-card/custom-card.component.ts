@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { CardType, CustomCard } from 'src/app/models/customCard';
 import { Selected } from 'src/app/models/selectedTab';
+import { PopupsComponent } from '../popups/popups.component';
 
 @Component({
   selector: 'app-custom-card',
@@ -17,7 +19,7 @@ export class CustomCardComponent implements OnInit {
 
   default = "/assets/_misc/default.png";
 
-  constructor(public router: Router) {
+  constructor(public router: Router, public dialog: MatDialog) {
     this.cards.push(
       { id: 1, type: CardType.Game, topRated: true, imgSrc: "/assets/images-videos/compressed/apps/2048.jpg", imgLazy: "/assets/images-videos/tiny/apps/tiny_2048.jpg" },
       { id: 2, type: CardType.Game, topRated: true, imgSrc: "/assets/images-videos/compressed/apps/Balls.jpg", imgLazy: "/assets/images-videos/tiny/apps/tiny_balls.jpg" },
@@ -50,5 +52,27 @@ export class CustomCardComponent implements OnInit {
         }
       });
     }
+  }
+
+  openGooglePlayDialog() {
+    this.dialog.open(PopupsComponent, {
+      data: {
+        type: 'googlePlay',
+      },
+      position: {
+        top: '200px',
+      },
+    });
+  }
+
+  openAppStoreDialog() {
+    this.dialog.open(PopupsComponent, {
+      data: {
+        type: 'appStore',
+      },
+      position: {
+        top: '200px',
+      },
+    });
   }
 }

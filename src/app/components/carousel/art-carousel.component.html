@@ -1,22 +1,26 @@
 <div class="carousel">
-    <h2 class="carousel-title">ART</h2>
-    <!-- <div class="controls" id="art-controls" tabindex="0">
-        <div class="prev" data-controls="prev" tabindex="-1">
-            <img src="/assets/icons/arrow_left.png">
-        </div>
-        <div class="next" data-controls="next" tabindex="-1">
-            <img src="/assets/icons/arrow_right.png">
-        </div>
-    </div> -->
+    <h2>ART</h2>
+    <!-- <swiper class="art-swiper" [config]="swiperConfig">
+        <ng-template class="swiper-slide" swiperSlide *ngFor="let image of artImages">
+            <img routerLink="/Art" [defaultImage]="image.imgLazy" [lazyLoad]="image.imgSrc" />
+        </ng-template>
+    </swiper> -->
 
-
-    <!-- <ngx-tiny-slider [config]="artTinySliderConfig" #sliderLazy class="art-slider" [hidden]="sliderHidden">
-        <ng-container class="items">
-            <div class="item" *ngFor="let image of artImages">
-                <img class="tns-lazy-img lazy-art" routerLink="/Art" [src]="image.imgLazy"
-                    (load)="onImgLoadSuccess()" />
-            </div>
-        </ng-container>
-    </ngx-tiny-slider> -->
     <button mat-stroked-button routerLink="/Art">View More Art</button>
 </div>
+
+<swiper class="art-swiper" #swiperRef [navigation]="navigation" (swiper)="log('swiper')" (slideChange)="log('slideChange')"
+    [autoplay]="true" [slidesPerView]="1" [spaceBetween]="50" [breakpoints]="breakpoints" [scrollbar]="scrollbar"
+    [loop]="true" [pagination]="{ el: '.swiper-pagination.pagination-test' }">
+    <ng-container *ngIf="show">
+        <ng-template swiperSlide>Best slide ever 1 {{ show }}</ng-template>
+        <ng-template swiperSlide>Best slide ever 2</ng-template>
+    </ng-container>
+    <ng-template swiperSlide>
+        <div *ngIf="true">Best slide ever 3</div>
+    </ng-template>
+    <ng-template swiperSlide let-data *ngFor="let image of artImages; index as i">
+        <img routerLink="/Art" [defaultImage]="image.imgLazy" [lazyLoad]="image.imgSrc" />
+    </ng-template>
+    <div slot="container-end" class="swiper-pagination pagination-test"></div>
+</swiper>

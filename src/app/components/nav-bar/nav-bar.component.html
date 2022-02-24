@@ -16,10 +16,10 @@
 
     <nav class="Top-Nav">
         <a routerLink="/Home" routerLinkActive="Active-Page" class="Nav_Button">Home</a>
-        <a routerLink="/Chaos" routerLinkActive="Active-Page" class="Nav_Button ">Chaos</a>
+        <a (click)="openChaosDialog();" class="Nav_Button ">Chaos</a>
         <a routerLink="/Art" routerLinkActive="Active-Page" class="Nav_Button">Art</a>
         <a routerLink="/Apps" routerLinkActive="Active-Page" class="Nav_Button">Apps</a>
-        <a (click)="openMusicDialog();" class="Nav_Button Music_Popup">Music</a>
+        <a (click)="openMusicDialog();" class="Nav_Button">Music</a>
     </nav>
 </div>
 
@@ -31,7 +31,7 @@
     <div class="Side_Nav_Content">
         <div class="Side_Nav_Links">
             <a routerLink="/Home" routerLinkActive="Active-Page" (click)="clickOut();" class="Nav_Button">Home</a>
-            <a routerLink="/Chaos" routerLinkActive="Active-Page" (click)="clickOut();" class="Nav_Button ">Chaos</a>
+            <a (click)="clickOut(); openChaosDialog();" class="Nav_Button ">Chaos</a>
             <a routerLink="/Art" routerLinkActive="Active-Page" (click)="clickOut();" class="Nav_Button">Art</a>
             <a routerLink="/Apps" routerLinkActive="Active-Page" (click)="clickOut();" class="Nav_Button">Apps</a>
             <a (click)="clickOut(); openMusicDialog();" class="Nav_Button">Music</a>
