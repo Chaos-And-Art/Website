@@ -34,30 +34,31 @@
 <!--#region Contact-Form-->
 <div class="Box">
     <h2>Contact Form</h2>
-    <form class="Contact-Form">
+    <form class="Contact-Form" [formGroup]="contactForm" (ngSubmit)="onContactSubmit()">
         <div class="Form-Input">
             <img src="/assets/icons/user.png">
-            <input type="text" id="Name" name="Name" placeholder="Name" required>
+            <input type="text" id="Name" formControlName="name" placeholder="Name"  (keypress)="checkName($event)" required>
         </div>
 
         <div class="Form-Input">
             <img src="/assets/icons/at.png">
-            <input type="email" id="Email" name="Email" placeholder="Email" required>
+            <input type="email" id="Email" formControlName="email" placeholder="Email" required>
         </div>
 
         <div class="Form-Input">
             <img src="/assets/icons/clipboard.png">
-            <input type="subject" id="Subject" name="Subject" placeholder="Subject" required>
+            <input type="subject" id="Subject" formControlName="subject" placeholder="Subject" required>
         </div>
 
         <div class="Form-Input">
             <img src="/assets/icons/write.png">
-            <textarea id="Message" name="Message" maxlength="3000" placeholder="Message" required></textarea>
+            <textarea id="Message" name="Message" formControlName="message" maxlength="3000" placeholder="Message"
+                required></textarea>
         </div>
 
         <div class="Form-Button">
             <!-- Popup for successfully sent -->
-            <button mat-stroked-button type="submit" name="submit">Send</button>
+            <button mat-stroked-button type="submit" value="Submit" name="submit">Send</button>
         </div>
     </form>
 </div>

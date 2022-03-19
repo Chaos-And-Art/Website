@@ -1,6 +1,6 @@
 .Dashboard {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     text-align: center;
 }
 
@@ -113,7 +113,7 @@
 
 @media screen and (min-width: 768px) {
     .Dashboard {
-        height: 111vh;
+        height: 115vh;
     }
     .Dashboard-Logo img {
         width: 85px;

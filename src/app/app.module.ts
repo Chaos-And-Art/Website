@@ -11,6 +11,9 @@ import { NgParticlesModule } from 'ng-particles';
 import { SwiperModule } from 'swiper/angular';
 import { NgxTinySliderModule } from 'ngx-tiny-slider';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -81,6 +84,9 @@ import { X2048Component } from './components/_pages/chaosProjects/x2048/x2048.co
     SwiperModule,
     NgxTinySliderModule,
     LazyLoadImageModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
