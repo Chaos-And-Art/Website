@@ -67,6 +67,15 @@
 }
 
 /*#region-----------------------Responsive_Layout-------------------------*/
+@media screen and (min-width: 320px) {
+    .Validation {
+        width: 50%;
+        margin: auto;
+        padding: 3px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+}
 
 @media screen and (min-width: 375px) {
     .Contact-Intro {
@@ -111,6 +120,11 @@
     .mat-stroked-button {
         width: 40%;
     }
+    .Validation {
+        width: 25%;
+        padding: 3px;
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -143,9 +157,19 @@
     .mat-stroked-button {
         width: 25%;
     }
+    .Validation {
+        width: 25%;
+        padding: 4px;
+        font-size: 15px;
+    }
 }
 
 @media screen and (min-width: 2560px) {
+    .Validation {
+        width: 15%;
+        padding: 5px;
+        font-size: 16px;
+    }
 }
 
 /*#endregion*/

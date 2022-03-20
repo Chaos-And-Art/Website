@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from 'src/app/services/contact.service';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupsComponent } from '../../popups/popups.component';
 
 @Component({
   selector: 'app-contact',
@@ -11,13 +14,14 @@ export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
   validationPattern = new RegExp(/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð,.'-]+(\s+[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð,.'-]+)*$/u,);
+  submitted: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, private contactService: ContactService) {
+  constructor(private formBuilder: FormBuilder, private contactService: ContactService, public dialog: MatDialog) {
     this.contactForm = this.formBuilder.group({
-      name: [''],
-      email: [''],
-      subject: [''],
-      message: [''],
+      name: new FormControl("", [Validators.required, Validators.pattern(this.validationPattern)]),
+      email: ['', [Validators.required, Validators.email]],
+      subject: ['', [Validators.required]],
+      message: ['', [Validators.required]]
     });
 
   }
@@ -26,18 +30,34 @@ export class ContactComponent implements OnInit {
 
   }
 
+  get form(): { [key: string]: AbstractControl; } {
+    return this.contactForm.controls;
+  }
+
   onContactSubmit() {
     if (this.contactForm.valid) {
-      console.log("valid")
-      this.contactService.sendForm(this.contactForm).toPromise().then((result) => {
-        console.log(result)
-      }, err => {
-        if (err.status >= 500) {
-          window.location.href = "/confirmation/webError";
-        } else {
-          alert(err.message)
-        }
-      });
+      this.contactService.sendForm(this.contactForm).then(result => {
+        console.log(result);
+        this.dialog.open(PopupsComponent, {
+          data: {
+            type: 'contactFormSuccess',
+          },
+          position: {
+            top: '200px',
+          },
+        });
+        this.contactForm.reset();
+      }).catch(err => {
+        console.log(err);
+        this.dialog.open(PopupsComponent, {
+          data: {
+            type: 'contactFormFailed',
+          },
+          position: {
+            top: '200px',
+          },
+        });
+      })
     }
   }
 

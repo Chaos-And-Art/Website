@@ -1,29 +1,28 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs';
 import { ContactForm } from '../models/contactForm';
+import { AngularFirestore, AngularFirestoreCollection, DocumentReference } from '@angular/fire/compat/firestore';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
-  constructor(private http: HttpClient) { }
+  contactForm: AngularFirestoreCollection<any>;
+  constructor(private firestore: AngularFirestore) {
+    this.contactForm = this.firestore.collection('ContactForm');
+  }
 
-  sendForm(contactForm: FormGroup): Observable<string> {
-    var httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-      })
-    };
+  sendForm(contactForm: FormGroup): Promise<DocumentReference<any>> {
     var contactFormData = <ContactForm>{
       Name: contactForm.get('name')?.value,
       Email: contactForm.get('email')?.value,
       Subject: contactForm.get('subject')?.value,
       Message: contactForm.get('message')?.value
     };
-    return this.http.post<string>("/assets/ContactForm.php", contactFormData, httpOptions);
+    return this.contactForm.add(contactFormData);
+
   }
 
 }
