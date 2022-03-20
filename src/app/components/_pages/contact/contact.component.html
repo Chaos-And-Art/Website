@@ -37,23 +37,46 @@
     <form class="Contact-Form" [formGroup]="contactForm" (ngSubmit)="onContactSubmit()">
         <div class="Form-Input">
             <img src="/assets/icons/user.png">
-            <input type="text" id="Name" formControlName="name" placeholder="Name"  (keypress)="checkName($event)" required>
+            <input type="text" id="Name" formControlName="name" placeholder="Name" (keypress)="checkName($event)" required>
+        </div>
+        <div class="Validation alert-danger" *ngIf="form['name'].invalid && (form['name'].dirty || form['name'].touched)">
+            <div *ngIf="form['name'].errors?.['required']">
+                Name is required.
+            </div>
         </div>
 
         <div class="Form-Input">
             <img src="/assets/icons/at.png">
             <input type="email" id="Email" formControlName="email" placeholder="Email" required>
         </div>
+        <div class="Validation alert-danger" *ngIf="form['email'].invalid && (form['email'].dirty || form['email'].touched)">
+            <div *ngIf="form['email'].errors?.['required']">
+                Email is required.
+            </div>
+            <div *ngIf="form['email'].errors?.['email']">
+                Email is invalid.
+            </div>
+        </div>
 
         <div class="Form-Input">
             <img src="/assets/icons/clipboard.png">
             <input type="subject" id="Subject" formControlName="subject" placeholder="Subject" required>
+        </div>
+        <div class="Validation alert-danger" *ngIf="form['subject'].invalid && (form['subject'].dirty || form['subject'].touched)">
+            <div *ngIf="form['subject'].errors?.['required']">
+                Subject is required.
+            </div>
         </div>
 
         <div class="Form-Input">
             <img src="/assets/icons/write.png">
             <textarea id="Message" name="Message" formControlName="message" maxlength="3000" placeholder="Message"
                 required></textarea>
+        </div>
+        <div class="Validation alert-danger" *ngIf="form['message'].invalid && (form['message'].dirty || form['message'].touched)">
+            <div *ngIf="form['message'].errors?.['required']">
+                Message is required.
+            </div>
         </div>
 
         <div class="Form-Button">

@@ -15,6 +15,11 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+// import { AngularFireStorageModule } from '@angular/fire/storage';
+// import { AngularFireAuthModule } from '@angular/fire/auth';
+
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './components/_pages/dashboard/dashboard.component';
@@ -40,6 +45,16 @@ import { CustomImageComponent } from './components/custom-image/custom-image.com
 import { BlankComponent } from './components/_pages/blank/blank.component';
 import { FireworksComponent } from './components/_pages/chaosProjects/fireworks/fireworks.component';
 import { X2048Component } from './components/_pages/chaosProjects/x2048/x2048.component';
+
+const config = {
+  apiKey: "AIzaSyBaxkdd7W7DMN4AGPY9QzrhNudW5hUNxoo",
+  authDomain: "support-chaosandart-studio.firebaseapp.com",
+  projectId: "support-chaosandart-studio",
+  storageBucket: "support-chaosandart-studio.appspot.com",
+  messagingSenderId: "342720268679",
+  appId: "1:342720268679:web:44a3b5789507edc90e2b22",
+  measurementId: "G-2NEQ3V3LBW"
+};
 
 @NgModule({
   declarations: [
@@ -86,7 +101,9 @@ import { X2048Component } from './components/_pages/chaosProjects/x2048/x2048.co
     LazyLoadImageModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(config),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

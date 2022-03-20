@@ -37,3 +37,23 @@
         <button mat-button mat-dialog-close cdkFocusInitial>OK</button>
     </mat-dialog-actions>
 </div>
+
+<div *ngIf="data.type === 'contactFormSuccess'">
+    <h2 mat-dialog-title style="color: rgb(115, 200, 115);">Successfully Sent</h2>
+    <mat-dialog-content>
+        <p>Thank you for contacting us. We will be in touch with you at our earliest convenience.</p>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        <button mat-button mat-dialog-close cdkFocusInitial style="color: rgb(115, 200, 115);">OK</button>
+    </mat-dialog-actions>
+</div>
+
+<div *ngIf="data.type === 'contactFormFailed'">
+    <h2 mat-dialog-title style="color: rgb(250, 100, 100);">Submission Failed</h2>
+    <mat-dialog-content>
+        <p>The form could not be sent. Please try again later.</p>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        <button mat-button mat-dialog-close cdkFocusInitial style="color: rgb(250, 100, 100);">OK</button>
+    </mat-dialog-actions>
+</div>
