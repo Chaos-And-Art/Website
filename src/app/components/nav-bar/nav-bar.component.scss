@@ -7,8 +7,11 @@
     top: 45px;
     right: 1px;
     padding: 15px;
-    .mat-icon {
-        padding-top: 6px;
+    .mat-slide-toggle {
+        .mat-icon {
+            height: 30px;
+            margin-top: 14px;
+        }
     }
     .Theme-Name {
         font-size: 12px;
@@ -144,8 +147,11 @@
 .Side-Theme-Slider {
     position: absolute;
     bottom: 115px;
-    .mat-icon {
-        padding-top: 6px;
+    .mat-slide-toggle {
+        .mat-icon {
+            height: 30px;
+            margin-top: 14px;
+        }
     }
     .Theme-Name {
         font-size: 12px;
