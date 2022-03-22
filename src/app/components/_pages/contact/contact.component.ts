@@ -68,6 +68,5 @@ export class ContactComponent implements OnInit {
       value.preventDefault();
     }
   }
-
 }
 

@@ -8,8 +8,11 @@
     margin: auto;
     padding: 15px;
     text-align: right;
-    .mat-icon {
-        padding-top: 6px;
+    .mat-slide-toggle {
+        .mat-icon {
+            height: 30px;
+            margin-top: 14px;
+        }
     }
     .Theme-Name {
         font-size: 12px;
