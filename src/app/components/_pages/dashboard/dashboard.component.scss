@@ -11,7 +11,7 @@
     .mat-slide-toggle {
         .mat-icon {
             height: 30px;
-            margin-top: 14px;
+            margin-top: 12px;
         }
     }
     .Theme-Name {
@@ -23,6 +23,7 @@
 }
 
 .Dashboard-Logo {
+    margin-top: -30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,26 +36,26 @@
 }
 
 .Dashboard-Name {
-    padding-top: 30px;
+    padding-top: 20px;
     font-size: 20px;
 }
 
 .Dashboard-Links {
-    padding-top: 30px;
+    padding-top: 10px;
     text-align: center;
     column-count: 1;
 }
 
 .Dashboard-Links a {
-    width: 85%;
+    width: 75%;
     margin: auto;
     display: block;
     padding: 5px 15px;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 5px;
     border-radius: 12px;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     text-decoration: none;
 }
 
@@ -80,15 +81,23 @@
 }
 
 @media screen and (min-width: 375px) {
-    .Dashboard-Logo img {
-        width: 85px;
-        height: 85px;
+    .Dashboard-Logo {
+        margin-top: -20px;
+        img {
+            width: 85px;
+            height: 85px;
+        }
     }
     .Dashboard-Name {
+        padding-top: 20px;
         font-size: 20px;
     }
-    .Dashboard-Links a {
-        width: 75%;
+    .Dashboard-Links {
+        padding-top: 10px;
+        a {
+            width: 70%;
+            font-size: 18px;
+        }
     }
     .Dashboard-Icons img {
         width: 40px;
@@ -106,7 +115,7 @@
         font-size: 22px;
     }
     .Dashboard-Links a {
-        width: 70%;
+        width: 65%;
     }
     .Dashboard-Icons img {
         width: 40px;
@@ -115,77 +124,93 @@
 }
 
 @media screen and (min-width: 768px) {
-    .Dashboard {
-        height: 115vh;
-    }
-    .Dashboard-Logo img {
-        width: 85px;
-        height: 85px;
+    .Dashboard-Logo {
+        margin-top: -50px;
+        img {
+            width: 85px;
+            height: 85px;
+        }
     }
     .Dashboard-Name {
         font-size: 22px;
     }
     .Dashboard-Links a {
-        width: 40%;
+        width: 35%;
+        font-size: 16px;
     }
-    .Dashboard-Icons img {
-        width: 40px;
-        margin: 20px;
+    .Dashboard-Icons {
+        margin-top: 10px;
+        img {
+            width: 40px;
+            margin: 20px;
+        }
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .Dashboard-Logo img {
-        width: 100px;
-        height: 100px;
+    .Dashboard-Logo {
+        margin-top: -55px;
+        img {
+            width: 80px;
+            height: 80px;
+        }
     }
     .Dashboard-Name {
-        font-size: 25px;
-    }
-    .Dashboard-Links a {
-        width: 30%;
+        margin-top: 10px;
         font-size: 20px;
     }
+    .Dashboard-Links a {
+        width: 25%;
+        margin-top: 12px;
+        font-size: 18px;
+    }
     .Dashboard-Icons img {
-        width: 45px;
-        height: 50px;
+        width: 35px;
+        height: 35px;
         margin: 25px;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .Dashboard-Logo img {
-        width: 100px;
-        height: 100px;
+    .Dashboard-Logo {
+        margin-top: -45px;
+        img {
+            width: 100px;
+            height: 100px;
+        }
     }
     .Dashboard-Name {
         font-size: 25px;
     }
     .Dashboard-Links a {
-        width: 25%;
-        font-size: 20px;
+        width: 22%;
+        font-size: 17px;
     }
     .Dashboard-Icons img {
-        width: 50px;
-        margin: 25px;
+        width: 40px;
+        height: 40px;
+        margin: 20px;
     }
 }
 
 @media screen and (min-width: 2560px) {
-    .Dashboard-Logo img {
-        width: 175px;
-        height: 175px;
+    .Dashboard-Logo {
+        margin-top: 75px;
+        img {
+            width: 175px;
+            height: 175px;
+        }
     }
     .Dashboard-Name {
         font-size: 45px;
     }
     .Dashboard-Links a {
-        width: 20%;
-        font-size: 35px;
+        width: 15%;
+        font-size: 25px;
     }
     .Dashboard-Icons img {
-        width: 80px;
-        height: 90px;
+        width: 65px;
+        height: 65px;
         margin: 35px;
     }
 }
